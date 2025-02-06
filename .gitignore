@@ -1,4 +1,4 @@
-# Node modules
+# Node modules (nếu bạn sử dụng Node.js)
 node_modules/
 
 # Thư mục build hoặc dist (nếu bạn biên dịch dự án)
@@ -15,14 +15,6 @@ dist/
 tmp/
 temp/
 
-# Thư mục chứa Bootstrap (nếu bạn không muốn theo dõi tất cả)
-bootstrap/
-
-# Thư mục chứa các file biên dịch
-css/
-js/
-fonts/
-
 # Thư mục IDE
 .vscode/
 .idea/
@@ -35,3 +27,10 @@ Thumbs.db
 *.bak
 *.tmp
 *.swp
+
+# Bỏ qua các file tạm thời của hệ thống
+*.orig
+*.class
+*.pyc
+*.pyo
+*.pyd
