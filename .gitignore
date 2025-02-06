@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+
+# Thư mục build hoặc dist (nếu bạn biên dịch dự án)
+build/
+dist/
+
+# File log
+*.log
+
+# File cấu hình cá nhân
+*.env
+
+# Thư mục tạm thời
+tmp/
+temp/
+
+# Thư mục chứa Bootstrap (nếu bạn không muốn theo dõi tất cả)
+bootstrap/
+
+# Thư mục chứa các file biên dịch
+css/
+js/
+fonts/
+
+# Thư mục IDE
+.vscode/
+.idea/
+
+# Hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Các file khác không cần thiết
+*.bak
+*.tmp
+*.swp
