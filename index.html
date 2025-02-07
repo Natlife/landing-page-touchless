@@ -4,19 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap3 adding -->
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Touchless</title>
 </head>
+
 <body>
-    <div>
-        <h1>Hello world</h1>
-        <button class="btn btn-success"> Hello!</button>
-
-    </div>
-
-
-
+    <section class="header container fullscreen" id="home" style="height: 100vh;">
+        <div class="content-resizer" style="top: 392.5px;">
+            <h2>Touchless</h2>
+            <p class="quote">
+                "/*"
+                <span class="typed-quote"></span>
+                <span class="typed-cursor">|</span>
+                "*/"
+            </p>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const typedQuoteElement = document.querySelector('.typed-quote');
+            const quotes = [
+                "Touchless is a web application that allows users to interact with their devices without touching them.",
+                "It uses the webcam to detect hand gestures and perform actions based on the gestures.",
+                "The application can be used to control various devices such as computers, smartphones, and smart TVs.",
+                "Users can perform actions such as scrolling, clicking, and swiping using hand gestures.",
+                "Touchless is a convenient and intuitive way to interact with devices without the need for physical contact."
+            ];
+            
+            let index = 0;
+            const typingSpeed = 80; // Typing speed in milliseconds
+            const reverseTypingSpeed = 40; // Reverse typing speed in milliseconds
+            const pauseBetweenQuotes = 200; // Pause between quotes in milliseconds
+
+            function typeQuote(quote) {
+                typedQuoteElement.textContent = ''; // Clear the text initially
+                let charIndex = 0;
+
+                function type() {
+                    if (charIndex < quote.length) {
+                        typedQuoteElement.textContent += quote.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(type, typingSpeed);
+                    } else {
+                        setTimeout(() => {
+                            reverseType(quote); // Start reverse typing after a pause
+                        }, pauseBetweenQuotes);
+                    }
+                }
+
+                type(); // Start the typing effect for the current quote
+            }
+
+            function reverseType(quote) {
+                let charIndex = quote.length - 1; // Start from the end of the quote
+
+                function type() {
+                    if (charIndex >= 0) {
+                        typedQuoteElement.textContent = quote.substring(0, charIndex);
+                        charIndex--;
+                        setTimeout(type, reverseTypingSpeed);
+                    } else {
+                        index = (index + 1) % quotes.length; // Move to the next quote
+                        typeQuote(quotes[index]); // Type the next quote
+                    }
+                }
+
+                type(); // Start the reverse typing effect
+            }
+
+            typeQuote(quotes[index]); // Start with the first quote
+        });
+    </script>
+
+
+
 </body>
+
 </html>

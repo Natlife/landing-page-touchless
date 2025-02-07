@@ -1,0 +1,61 @@
+.fullscreen {
+    height: 600px;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 8em;
+    background-color: #fbfbfb;
+    z-index: 20;
+    border-bottom: solid 1px #ddd;
+}
+
+.content-resizer {
+    position: absolute;
+    width: 100%;
+    top: 200px;
+    min-height: 200px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0 0 34px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.quote {
+    font-family: "Raleway", 'Century Gothic', 'TeXGyreAdventor', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #999;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        -ms-filter: "alpha(opacity=40)";
+        filter: alpha(opacity = 40);
+        opacity: .4;
+        top: 0;
+    }    
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease; /* Adjust duration as needed */
+}
