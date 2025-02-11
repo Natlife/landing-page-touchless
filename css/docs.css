@@ -1,0 +1,52 @@
+/* navbar */
+nav{
+    display: flex;
+    position: fixed;
+    align-items: end;
+
+
+}
+
+ul li{
+    display: flex;
+    list-style-type:none ;
+    align-items: end;
+    justify-content: center;
+    width: 10%;
+    
+}
+.nav-menu{
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+}
+
+a{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-button{
+    height: 100%;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+nav ul li:hover{
+    border-bottom:1px solid gray;
+    a{
+        font-size: 20px;
+        transition: font-size 0.2s ease-in-out;
+    }
+
+}
+
+/* Body */
+.doc-title{
+    background-color: red;
+}
+.doc-content{
+    background-color: aqua;
+}
