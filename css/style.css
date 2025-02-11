@@ -1,3 +1,35 @@
+@charset "UTF-8";@font-face {
+    font-family: 'TeXGyreAdventor';
+    font-style: normal;
+    font-weight: normal;
+    src: url(./gothic/texgyreadventor-regular.otf)
+}
+
+@font-face {
+    font-family: 'TeXGyreAdventor';
+    font-style: normal;
+    font-weight: bold;
+    src: url(./gothic/texgyreadventor-bold.otf)
+}
+
+@font-face {
+    font-family: 'TeXGyreAdventor';
+    font-style: italic;
+    font-weight: normal;
+    src: url(./gothic/texgyreadventor-italic.otf)
+}
+
+@font-face {
+    font-family: 'TeXGyreAdventor';
+    font-style: italic;
+    font-weight: bold;
+    src: url(./gothic/texgyreadventor-bolditalic.otf)
+}
+
+html,body {
+    font-family: 'Century Gothic','TeXGyreAdventor',"STHeiti",sans-serif;
+}
+
 .fullscreen {
     height: 600px;
     position: relative;
@@ -14,9 +46,8 @@
 .header {
     text-align: center;
     padding-bottom: 8em;
-    background-color: #fbfbfb;
+    background-color: white;
     z-index: 20;
-    border-bottom: solid 1px #ddd;
 }
 
 .content-resizer {
@@ -46,16 +77,46 @@ h2 {
     text-align: center;
 }
 
-@keyframes pulse {
-    0%, 100% {
-        -ms-filter: "alpha(opacity=40)";
-        filter: alpha(opacity = 40);
-        opacity: .4;
-        top: 0;
-    }    
+#logo {
+    width: 48px; 
+    height: 48px; 
+    border-radius: 50%;
+    margin: 0 20px 0 0;
+    padding: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    
 }
 
-.fade-out {
-    opacity: 0;
-    transition: opacity 1s ease; /* Adjust duration as needed */
+.navbar-header{
+    padding: 20px;
 }
+
+.navigate{
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+li{
+    display: inline;
+    padding: 20px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 50px;
+  }
+
+#navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+  }
