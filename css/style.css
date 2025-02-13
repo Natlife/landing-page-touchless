@@ -28,6 +28,10 @@
 
 html,body {
     font-family: 'Century Gothic','TeXGyreAdventor',"STHeiti",sans-serif;
+    /* test scrolle hidden */
+    height: 2000px;
+    /* xoa thanh ngang scroll */
+    overflow-x: hidden;
 }
 
 .fullscreen {
@@ -116,7 +120,7 @@ li{
   }
 
 #navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     overflow: hidden;
   }
