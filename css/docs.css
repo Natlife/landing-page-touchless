@@ -1,8 +1,11 @@
 /* navbar */
 nav{
     display: flex;
-    position: sticky !important;
+    position: fixed !important;
+    top: 0;
+    z-index: 10;
     align-items: end;
+    background-color: white;
     border-bottom:1px solid gray !important; 
 
 }

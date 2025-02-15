@@ -23,7 +23,7 @@
     </section>
 
     <!-- navbar -->
-    <nav class="navigate navbar navbar-inverse navbar-fixed-top" id="navbar">
+    <nav class=" hidden navigate navbar navbar-inverse navbar-fixed-top" id="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
                 <img class="navbar-brand" id="logo" src="/pictures/logo.jpg" >
@@ -38,6 +38,21 @@
             </ul>
         </div>
       </nav>
+    <!-- home -->
+    <section class="header container fullscreen" id="home" style="height: 100vh; width: 100vw; ">
+        <div class="content-resizer" style="top: 392.5px; ">
+            <h2>touchless</h2>
+            <p class="quote">
+                /*
+                <span class="typed-quote"></span>
+                <span class="typed-cursor">|</span>
+                */
+            </p>
+        </div>
+    </section>
+
+    
+      
 
     <!-- features -->
     <div id="features" class="slider">
@@ -78,6 +93,14 @@
 
     <!-- fuctions -->
     <script>
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY === 0) {
+                navbar.classList.add("hidden");
+            } else {
+                navbar.classList.remove("hidden");
+            }
+        });
         document.addEventListener("DOMContentLoaded", function() {
             const typedQuoteElement = document.querySelector('.typed-quote');
             const quotes = [
