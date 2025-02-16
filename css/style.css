@@ -29,10 +29,7 @@
 html,body {
     font-family: 'Century Gothic','TeXGyreAdventor',"STHeiti",sans-serif;
     /* test scrolle hidden */
-    height: 2000px;
     /* xoa thanh ngang scroll */
-    overflow-x: hidden;
-}
 
 .container {
     position: relative;
@@ -114,7 +111,7 @@ li{
   }
 
   /* features */
-/* #features {
+#features {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -135,4 +132,4 @@ li{
     width: 500%;
     height: 500px;
     display: flex;
-} */
+}
