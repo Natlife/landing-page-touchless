@@ -1,0 +1,46 @@
+#vision {
+    margin-top: 120px;
+    margin-bottom: -200px;
+    text-align: center;
+}
+
+.highlight {
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+#feature {
+      transition: transform 0.3s ease;
+      margin-bottom: -200px;
+    }
+
+#feature:hover {
+      transform: scale(1.02);
+}
+
+img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 48px 54px 48px 12px;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+#copyright p {
+    padding: 1rem;
+
+}
+
+#vision h2, #copyright h2 {
+
+    text-align: center;
+}
+#feature, #copyright {
+    text-align: center;
+    max-width: 100% ;
+}
+
