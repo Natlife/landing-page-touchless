@@ -1,4 +1,9 @@
+#navbar{
+    display: block !important;
+}
+
 #lastest-verDownload{
+    margin-top: 50px;
     padding: 1.25em;
 }
 
