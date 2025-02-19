@@ -30,6 +30,7 @@ html,body {
     font-family: 'Century Gothic','TeXGyreAdventor',"STHeiti",sans-serif;
     /* test scrolle hidden */
     /* xoa thanh ngang scroll */
+}    overflow-x: hidden;
 }
 .container {
     position: relative;
@@ -107,7 +108,6 @@ li{
     position: fixed;
     top: 0;
     overflow: hidden;
-
   }
 
   /* features */
