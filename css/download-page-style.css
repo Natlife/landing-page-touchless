@@ -1,0 +1,68 @@
+#navbar{
+    display: block !important;
+}
+
+#lastest-verDownload{
+    margin-top: 50px;
+    padding: 1.25em;
+}
+
+#list-version {
+    padding: 1.25em;
+    border-top: 2px solid black;
+}
+
+.list-row-heading {
+    width: 100%;
+    display: flex;
+    padding: .5em .5em .4em .75em;
+}
+
+
+.list-row-container {
+    width: 100%;
+    border: 1px solid #caccce;
+    height: 16.75em;
+    padding: 0;
+}
+
+.list-row-container ol {
+    list-style: none;
+    list-style-image: none;
+    padding: 0px;
+}
+
+.list-row-container li {
+    display: flex;
+    text-transform: none;
+    padding: .5em .5em .4em .75em;
+    align-items: center;
+}
+
+
+.list-row-container li:nth-child(odd) {
+    background-color: #f2f4f6;
+}
+
+.release-ver {
+    display: inline-block;
+    width: 20%;
+}
+
+.release-date {
+    width: 30%;
+    display: inline-block;
+
+}
+
+.release-download {
+    width: 25%;
+    display: inline-block;
+
+}
+
+.release-note {
+    width: 25%;
+    display: inline-block;
+
+}
