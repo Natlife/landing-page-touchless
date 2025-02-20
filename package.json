@@ -1,0 +1,23 @@
+{
+  "name": "landing-page-touchless",
+  "version": "1.0.0",
+  "description": "landing page of py-touchless",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Natlife/landing-page-touchless.git"
+  },
+  "author": "PhanNTSon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Natlife/landing-page-touchless/issues"
+  },
+  "homepage": "https://github.com/Natlife/landing-page-touchless#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1"
+  }
+}
