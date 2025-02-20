@@ -33,29 +33,9 @@ html,body {
     overflow-x: hidden;
 }    
 
-/* .container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
-
 .content-resizer {
     position: absolute;
     width: 100%;
-    top: 200px;
-    min-height: 200px;
-}
-
-h2 {
-    font-size: 48px;
-    font-weight: normal;
-    line-height: 48px;
-    margin: 0 0 34px;
-    padding: 0 30px;
-    text-align: center;
 }
 
 .quote {
@@ -109,6 +89,8 @@ li{
     position: fixed;
     top: 0;
     overflow: hidden;
+    background-color: #ffffff;
+    border: none;
   }
 
- 
+  /* carousel */
