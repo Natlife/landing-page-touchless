@@ -11,22 +11,21 @@
     <title>Touchless</title>
 </head>
 
-<body>
+<body style="overflow-x: hidden; font-family: 'Century Gothic','TeXGyreAdventor','STHeiti',sans-serif;">
     <!-- navbar -->
-    <nav class=" hidden navigate navbar navbar-inverse navbar-fixed-top" id="navbar">
+    <nav class=" hidden navigate navbar navbar-inverse navbar-fixed-top" id="navbar" >
         <div class="container-fluid">
             <div class="navbar-header">
                 <img class="navbar-brand" id="logo" src="pictures/logo.jpg" >
-                <span class="navbar-brand" style="font-size: 48px; color: #000;"> touchless </span>
+                <span class="navbar-brand" style="font-size: 30px; color: #000;"> touchless </span>
             </div>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#home"> home</a></li>
-            <li><a href="docs.html"> docs</a></li>
-            <li><a href="download.html"> download</a></li>
-            <li><a href="about.html"> about</a></li>
-        </ul>
-    </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-btn"><a href="index.html"> home</a></li>
+                <li class="nav-btn"><a href="docs.html"> documentation</a></li>
+                <li class="nav-btn"><a href="download.html"> download</a></li>
+                <li class="nav-btn"><a href="about.html"> about</a></li>
+            </ul>
+        </div>
     </nav>    
     
     <!-- home -->
@@ -44,9 +43,9 @@
 
     <!-- docs -->
      <div class="row">
-         <div class="container" style="margin-bottom: 10%;">
-             <h2 class="col-sm-4">Docs</h2>  
-             <div id="myCarousel" class="carousel slide col-sm-8" data-ride="carousel">
+         <div class="container" style="margin-bottom: 10%; ">
+             <h2 class="col-sm-4">Touchless is a application that allows users to interact with their devices without touching them. </h2>  
+             <div id="myCarousel" class="carousel slide col-sm-8" data-ride="carousel" style="padding: 0px;">
                  <!-- Indicators -->
                 <!-- <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -94,6 +93,7 @@
                 navbar.classList.remove("hidden");
             }
         });
+
         document.addEventListener("DOMContentLoaded", function() {
             const typedQuoteElement = document.querySelector('.typed-quote');
             const quotes = [
@@ -105,9 +105,9 @@
             ];
             
             let index = 0;
-            const typingSpeed = 80; // Typing speed in milliseconds
-            const reverseTypingSpeed = 40; // Reverse typing speed in milliseconds
-            const pauseBetweenQuotes = 200; // Pause between quotes in milliseconds
+            const typingSpeed = 40; // Typing speed in milliseconds
+            const reverseTypingSpeed = 10; // Reverse typing speed in milliseconds
+            const pauseBetweenQuotes = 1000; // Pause between quotes in milliseconds
 
             function typeQuote(quote) {
                 typedQuoteElement.textContent = ''; // Clear the text initially
