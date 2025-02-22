@@ -1,0 +1,87 @@
+#vision {
+    margin: 120px 64px -200px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0 0 34px;
+    padding: 0 30px;
+    text-align: center;
+}
+.highlight {
+    font-weight: 600;
+    color: #3b82f6;
+}
+.custom-container {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    margin: 240px 64px 240px;
+} 
+
+#feature {
+      transition: transform 0.3s ease;
+      margin-bottom: -200px;
+    }
+
+.feature {
+    background-color: white; /* Màu nền trắng */
+    padding: 24px; /* Khoảng cách bên trong phần tử (tương đương p-6 trong Tailwind) */
+    border-radius: 8px; /* Bo góc (tương đương rounded-lg) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng (tương đương shadow-md) */
+    transition: box-shadow 0.3s ease-in-out; /* Hiệu ứng chuyển đổi mượt */
+}
+
+.feature:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng khi hover (tương đương hover:shadow-lg) */
+}
+    
+
+#feature:hover {
+      transform: scale(1.02);
+}
+
+.icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.nameft {
+    font-size: 20px;
+    font-weight: 600;
+    color:#111827;
+}
+
+.detail { 
+    color:#4b5563;
+    margin-top: 8px;
+}
+
+img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 48px 64px 64px -12px;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+#copyright p {
+    margin-bottom: 48px;
+
+}
+
+#feature, #copyright {
+    text-align: center;
+    max-width: 100% ;
+}
+
+
