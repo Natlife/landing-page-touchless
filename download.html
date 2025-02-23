@@ -12,20 +12,29 @@
 
 <body>
     <!-- navbar -->
-    <nav class=" hidden navigate navbar navbar-inverse navbar-fixed-top" id="navbar">
+    <nav class=" navigate navbar navbar-inverse navbar-fixed-top" id="navbar">
         <div class="container-fluid">
+            <!-- Logo -->
             <div class="navbar-header">
                 <img class="navbar-brand" id="logo" src="/img/logo.jpg">
                 <span class="navbar-brand" style="font-size: 30px; color: #000;"> touchless </span>
             </div>
-            <ul class="nav navbar-nav navbar-right">
+
+            <!-- Button for mobile -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-list">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class=" nav navbar-nav navbar-right collapse navbar-collapse" id="nav-list">
                 <li><a href="index.html"> home</a></li>
                 <li><a href="docs.html"> documentation</a></li>
                 <li><a href="download.html"> download</a></li>
                 <li><a href="about.html"> about</a></li>
             </ul>
+
         </div>
-      </nav>
+    </nav>
 
     <!-- Section Download lastest Version-->
     <section class="container-fluid" style="margin-top: 120px;">
@@ -40,55 +49,69 @@
 
 
     <!-- Section List of Versions-->
-    <section class="container-fluid">
+    <section class="container-fluid downloads-section">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2" id="list-version">
-                <h3>Looking for more ?</h3>
+                <h3>Looking for more?</h3>
                 <p>Have a look</p>
-                <div class="list-row-heading">
-                    <span class="release-ver">Release Versions</span>
-                    <span class="release-date">Release Date</span>
-                    <span class="release-download"></span>
-                    <span class="release-note">Click for more</span>
+
+                <!-- Desktop Table -->
+                <table class="table download-list-table hidden-xs">
+                    <thead>
+                        <tr>
+                            <th class="release-ver">Release Version</th>
+                            <th class="release-date">Release Date</th>
+                            <th class="release-download">Download</th>
+                            <th class="release-note">Release Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="release-ver">Py-touchless 1.0.0</td>
+                            <td class="release-date">Jan 1, 2025</td>
+                            <td class="release-download">
+                                <a href="#" class="btn btn-primary btn-sm">Download</a>
+                            </td>
+                            <td class="release-note">
+                                <a href="#">Release Notes</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="release-ver">Py-touchless 0.9.0</td>
+                            <td class="release-date">Dec 1, 2024</td>
+                            <td class="release-download">
+                                <a href="#" class="btn btn-primary btn-sm">Download</a>
+                            </td>
+                            <td class="release-note">
+                                <a href="#">Release Notes</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Mobile List -->
+                <div class="download-list-mobile visible-xs">
+                    <div class="version-item">
+                        <h4>Py-touchless 1.0.0</h4>
+                        <div class="version-info">
+                            <p><strong>Release Date:</strong> Jan 1, 2025</p>
+                            <div class="mobile-buttons">
+                                <a href="#" class="btn btn-primary btn-sm">Download</a>
+                                <a href="#" class="btn btn-default btn-sm">Release Notes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="version-item">
+                        <h4>Py-touchless 0.9.0</h4>
+                        <div class="version-info">
+                            <p><strong>Release Date:</strong> Dec 1, 2024</p>
+                            <div class="mobile-buttons">
+                                <a href="#" class="btn btn-primary btn-sm">Download</a>
+                                <a href="#" class="btn btn-default btn-sm">Release Notes</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <ol class="list-row-container">
-                    <li>
-                        <span class="release-ver">
-                            <a>Py-touchless 1.0.0</a>
-                        </span>
-                        <span class="release-date">
-                            Jan,1,2025
-                        </span>
-                        <span class="release-download">
-                            <a>
-
-                            </a>
-                        </span>
-                        <span class="release-note">
-                            <a>
-                                Notes
-                            </a>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="release-ver">
-                            <a>Py-touchless 1.0.0</a>
-                        </span>
-                        <span class="release-date">
-                            Jan,1,2025
-                        </span>
-                        <span class="release-download">
-                            <a>
-
-                            </a>
-                        </span>
-                        <span class="release-note">
-                            <a>
-                                Notes
-                            </a>
-                        </span>
-                    </li>
-                </ol>
             </div>
         </div>
     </section>
@@ -100,69 +123,9 @@
         </div>
     </footer>
     <!-- fuctions -->
-    <script>
-        window.addEventListener("scroll", () => {
-            const navbar = document.getElementById("navbar");
-            if (window.scrollY === 0) {
-                navbar.classList.add("hidden");
-            } else {
-                navbar.classList.remove("hidden");
-            }
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            const typedQuoteElement = document.querySelector('.typed-quote');
-            const quotes = [
-                "Touchless is a application that allows users to interact with their devices without touching them.",
-                "It uses the webcam to detect hand gestures and perform actions based on the gestures.",
-                "The application can be used to control various devices such as computers, smartphones, and smart TVs.",
-                "Users can perform actions such as scrolling, clicking, and swiping using hand gestures.",
-                "Touchless is a convenient and intuitive way to interact with devices without the need for physical contact."
-            ];
-            
-            let index = 0;
-            const typingSpeed = 80; // Typing speed in milliseconds
-            const reverseTypingSpeed = 40; // Reverse typing speed in milliseconds
-            const pauseBetweenQuotes = 200; // Pause between quotes in milliseconds
-
-            function typeQuote(quote) {
-                typedQuoteElement.textContent = ''; // Clear the text initially
-                let charIndex = 0;
-
-                function type() {
-                    if (charIndex < quote.length) {
-                        typedQuoteElement.textContent += quote.charAt(charIndex);
-                        charIndex++;
-                        setTimeout(type, typingSpeed);
-                    } else {
-                        setTimeout(() => {
-                            reverseType(quote); // Start reverse typing after a pause
-                        }, pauseBetweenQuotes);
-                    }
-                }
-
-                type(); // Start the typing effect for the current quote
-            }
-
-            function reverseType(quote) {
-                let charIndex = quote.length - 1; // Start from the end of the quote
-
-                function type() {
-                    if (charIndex >= 0) {
-                        typedQuoteElement.textContent = quote.substring(0, charIndex);
-                        charIndex--;
-                        setTimeout(type, reverseTypingSpeed);
-                    } else {
-                        index = (index + 1) % quotes.length; // Move to the next quote
-                        typeQuote(quotes[index]); // Type the next quote
-                    }
-                }
-
-                type(); // Start the reverse typing effect
-            }
-
-            typeQuote(quotes[index]); // Start with the first quote
-        });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/download.js"></script>
 </body>
 
 </html>

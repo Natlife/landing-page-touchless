@@ -6,7 +6,6 @@ const port = 3000;
 app.engine("hbs", engine({
     extname: ".hbs",
     layoutsDir: "views/layouts",
-    partialsDir: "views/partials"
 }));
 
 app.set('view engine', 'hbs');
