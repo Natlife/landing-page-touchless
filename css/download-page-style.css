@@ -21,6 +21,42 @@
     background-color: #f2f4f6;
 }
 
+/*
+Desktop responsive
+*/
+.table-container{
+    max-height: 30vh;
+    overflow-y: scroll;
+}
+
+.download-list-table {
+    width: 100%;
+    margin-bottom: 0px;
+}
+/* Custom Scrollbar cho modern browsers */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*
+Mobile responsive
+*/
+
 .download-list-mobile .version-item{
     padding: 15px;
 }
