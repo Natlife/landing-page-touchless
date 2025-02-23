@@ -11,53 +11,30 @@
 </head>
 <body>
     <!-- navbar -->
-    <nav class=" navigate navbar navbar-inverse navbar-fixed-top" id="navbar">
+    <nav class="navigate navbar navbar-inverse navbar-fixed-top" id="navbar">
         <div class="container-fluid">
-            <a class="navbar-header">
-                <img class="navbar-brand" id="logo" src="/pictures/logo.jpg" >
+            <div class="navbar-header">
+                <img class="navbar-brand" id="logo" src="img/logo.jpg" >
                 <span class="navbar-brand" style="font-size: 30px; color: #000;"> touchless </span>
-            </a>
-            </ul>
+            </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#home"> home</a></li>
-                <li><a href="#features"> features</a></li>
-                <li><a href="#download"> download</a></li>
-                <li><a href="#about"> about</a></li>
+                <li><a href="index.html"> home</a></li>
+                <li><a href="docs.html"> documentation</a></li>
+                <li><a href="download.html"> download</a></li>
+                <li><a href="about.html"> about</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="doc-body container">
         <h1 class="current-page">Documentation for Touchless</h1>
-        <div class="content-page">
-            <div class="title" id="title1">Tiêu đề 1</div>
-            <div class="content" id="content1">Đây là nội dung ẩn cho tiêu đề 1.</div>
-            
-            <div class="title" id="title2">Tiêu đề 2</div>
-            <div class="content" id="content2">Đây là nội dung ẩn cho tiêu đề 2.</div>
-            
-            <div class="title" id="title3">Tiêu đề 3</div>
-            <div class="content" id="content3">Đây là nội dung ẩn cho tiêu đề 3.</div>
-        </div>
+            <div class="content-page">
+                <!-- Loading data tu GG sheet -->
+            </div>
         
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".title").click(function(){
-                // Lấy ID titel
-                var titleId = $(this).attr("id");
-                var contentId = "content" + titleId.charAt(titleId.length - 1);
-                // lấy id content ứng title
-                var content = $("#" + contentId);
-                if (content.is(":visible")) {
-                    content.slideUp();
-                } else {
-                    content.slideDown();
-                }
-            });
-        });
-    </script>
+    <script src="js/docs.js"></script>
 </body>
 </html>

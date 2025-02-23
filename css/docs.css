@@ -34,7 +34,11 @@ nav ul li:hover{
     margin: 5px 0;
     font-weight: bold;
     font-size: 200%;
+    border-bottom: 2px solid transparent; /* Để tránh màu viền mặc định */
+    border-image: linear-gradient(90deg, black, white);
+    border-image-slice: 1;
 }
+
 
 .content {
     display: none; 
