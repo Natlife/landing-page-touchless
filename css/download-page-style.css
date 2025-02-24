@@ -12,6 +12,11 @@
     text-align: center;
 }
 
+.row {
+    padding: 0;
+    height: 110vh;
+}
+
 /*
 Button RGB Color Stuffs
 */
@@ -49,9 +54,11 @@ Button RGB Color Stuffs
 }
 
 .rainbow-button:active {
-    transform: scale(0.98); /* Giảm nhẹ kích thước khi click */
+    transform: scale(0.98);
+    /* Giảm nhẹ kích thước khi click */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 /*
 Rainbow button over
 */

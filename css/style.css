@@ -53,9 +53,9 @@ body {
     border-radius: 50%;
     margin: 0 20px 0 0;
     padding: 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);   
 }
+
 
 .navbar-header{
     padding: 15px;
@@ -79,8 +79,14 @@ li{
 
 #navbar a:hover {
     color: black;
-    background-color: rgba(128, 128, 128, 0.137);
-    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+#navbar a:active {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transition: 0.3s;
 }
 
 #navbar {
@@ -89,6 +95,39 @@ li{
     overflow: hidden;
     background-color: #ffffff;
     border: none;
-  }
+}
 
-  /* carousel */
+/* carousel */
+div img {
+    width: 600px;
+    border-radius: 10px;
+    padding: 0;
+    margin: 20px;
+    
+}
+
+.row{
+    padding-top: 20vh ;
+    height: 90vh;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+div .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div .carousel-inner {
+    width: 650px;
+    padding-left: 3px;
+    box-shadow: 0 0 0 2px rgba(218,102,123,1), 8px 8px 0 0 rgba(218,102,123,1);
+    border-radius: 10px;
+}
+
+div #myCarousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
