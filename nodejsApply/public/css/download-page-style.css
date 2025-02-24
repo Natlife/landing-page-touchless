@@ -1,47 +1,116 @@
-#navbar{
-    display: block !important;
+#navbar button {
+    background-color: black;
 }
 
-#lastest-verDownload{
+#navbar ul {
+    border-color: white;
+}
+
+#lastest-verDownload {
     margin-top: 50px;
     padding: 1.25em;
+    text-align: center;
 }
 
+.row {
+    padding: 0;
+    height: 110vh;
+}
+
+/*
+Button RGB Color Stuffs
+*/
+
+@keyframes rainbow-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.rainbow-button {
+    border-radius: 15px;
+    color: white;
+    padding: 15px;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3);
+    background-size: 300% 300%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rainbow-button:hover {
+    animation: rainbow-animation 3s ease infinite;
+    transform: scale(1.05);
+    /* Tăng kích thước khi hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.rainbow-button:active {
+    transform: scale(0.98);
+    /* Giảm nhẹ kích thước khi click */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*
+Rainbow button over
+*/
 #list-version {
     padding: 1.25em;
     border-top: 2px solid black;
 }
 
-.list-row-heading {
-    width: 100%;
-    display: flex;
-    padding: .5em .5em .4em .75em;
-}
-
-
-.list-row-container {
-    width: 100%;
-    border: 1px solid #caccce;
-    height: 16.75em;
-    padding: 0;
-}
-
-.list-row-container ol {
-    list-style: none;
-    list-style-image: none;
-    padding: 0px;
-}
-
-.list-row-container li {
-    display: flex;
-    text-transform: none;
-    padding: .5em .5em .4em .75em;
-    align-items: center;
-}
-
-
-.list-row-container li:nth-child(odd) {
+.download-list-table tbody tr:nth-child(odd),
+.download-list-mobile .version-item:nth-child(odd) {
     background-color: #f2f4f6;
+}
+
+/*
+Desktop responsive
+*/
+.table-container {
+    max-height: 30vh;
+    overflow-y: scroll;
+}
+
+.download-list-table {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+/* Custom Scrollbar cho modern browsers */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*
+Mobile responsive
+*/
+
+.download-list-mobile .version-item {
+    padding: 15px;
 }
 
 .release-ver {
@@ -66,4 +135,3 @@
     display: inline-block;
 
 }
-
