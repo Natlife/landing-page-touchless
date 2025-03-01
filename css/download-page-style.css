@@ -21,43 +21,74 @@
 Button RGB Color Stuffs
 */
 
-@keyframes rainbow-animation {
+
+.rainbow-button {
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+
+.rainbow-button ::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.rainbow-button ::before {
+    content: "";
+    background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 0;
     }
 
     50% {
-        background-position: 100% 50%;
+        background-position: 400% 0;
     }
 
-    100% {
-        background-position: 0% 50%;
+    0% {
+        background-position: 0 0;
     }
 }
 
-.rainbow-button {
-    border-radius: 15px;
-    color: white;
-    padding: 15px;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3);
-    background-size: 300% 300%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: all 0.3s ease;
+.rainbow-button:hover::before{
+    opacity: 1;
 }
 
-.rainbow-button:hover {
-    animation: rainbow-animation 3s ease infinite;
-    transform: scale(1.05);
-    /* Tăng kích thước khi hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+.rainbow-button:active::after{
+    background: transparent;
 }
 
-.rainbow-button:active {
-    transform: scale(0.98);
-    /* Giảm nhẹ kích thước khi click */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+.rainbow-button:active{
+    color: #000;
+    font-weight: bold;
 }
+
 
 /*
 Rainbow button over
