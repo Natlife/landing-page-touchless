@@ -45,6 +45,16 @@ body {
     background-position: -5px -5px     
 }    
 
+.bgdefault{
+    height: auto;
+    --color: #E1E1E1;
+    background-color: #F3F3F3;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+    width: 100%;
+}
+
 /* ---------------------------------- nav ---------------------------------- */
 #logo{
     width: 55px;
@@ -59,11 +69,12 @@ body {
 }
 
 nav{
+    margin: 0;
     padding: 10px;
     color: black;
     height: 80px;
-    border-radius: 40px;
-    width: 100vw;
+    width: 100%;
+    background-color: #ffffff;
 }
 
 nav a{
@@ -71,9 +82,10 @@ nav a{
     text-decoration: none;
 }
 
-.navbar-defualt{
-    background-color: #ffffff;
-    border: none;
+.nav-icons{
+    margin-right: 10px;
+    height: 50px;
+    transition: 0.3s;
 }
 
 .icons{
@@ -83,7 +95,6 @@ nav a{
     width: 60px;
     font-size: 20px;
 }
-
 
 .col-sm-3{
     display: flex;
@@ -109,14 +120,31 @@ nav button {
 
 .nav-icons:hover{
     content: '';
-    color: black;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 40px;
     text-decoration: none;
+    
+}
+
+.nav-icons:focus{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:active{
+    text-decoration: none;
+    color: black;
 }
 
 nav button:hover{
     content: '';
     transition: 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     text-decoration: none;
 }
 
@@ -124,18 +152,13 @@ nav button:hover{
 /*---------------------------------- home ----------------------------------*/
 #home{
     margin-top: 120px;
-    height: 620px; 
-    width: 1300px; 
+    width: 90vw;
     border-radius: 15px; 
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    --color: #E1E1E1;
-    background-color: #F3F3F3;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-    background-size: 55px 55px;
+    
 }
 
 #home .imgBx{
@@ -219,16 +242,10 @@ nav button:hover{
 
 /*---------------------------------- feature ----------------------------------*/
 #ftures{
-    height: auto; 
-    width: 1300px; 
+    width: 90vw;
     padding: 30px;
     margin: 40px 2vw 40px 2vw; 
     border-radius: 15px; 
-    --color: #E1E1E1;
-    background-color: #F3F3F3;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-    background-size: 55px 55px;
 }
 
 #features .fts-name {
@@ -281,19 +298,13 @@ nav button:hover{
 
 /*---------------------------------- update ----------------------------------*/
 #updates{
-    height: 620px; 
-    width: 1300px; 
+    width: 90vw;
     margin: 0px 2vw -80px 2vw; 
     border-radius: 15px; 
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
-    --color: #E1E1E1;
-    background-color: #F3F3F3;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-    background-size: 55px 55px;
 }
 
 #updates .bground{
@@ -399,15 +410,10 @@ div #myCarousel{
 
 /*---------------------------------- download ----------------------------------*/
 #download{
-    height: 800px; 
-    width: 1300px; 
+    width: 90vw;
     margin: 0 2vw 40px 2vw; 
     border-radius: 15px; 
-    --color: #E1E1E1;
-    background-color: #F3F3F3;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-    background-size: 55px 55px;
+   background-size: 55px 55px;
 }
 
 #download h1{
@@ -575,8 +581,7 @@ Mobile responsive
 
 /*---------------------------------- docs ----------------------------------*/
 #docs{
-    height: auto; 
-    width: 1300px; 
+    width: 90vw;
     padding-bottom: 40px;
     margin: 0px 2vw 40px 2vw; 
     border-radius: 15px; 
@@ -584,11 +589,6 @@ Mobile responsive
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
-    --color: #E1E1E1;
-    background-color: #F3F3F3;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-    background-size: 55px 55px;
 }
 
 #docs .bground{
@@ -689,16 +689,10 @@ Mobile responsive
 
 /*---------------------------------- team ----------------------------------*/
 #team{
-    height: auto; 
-    width: 1300px; 
+    width: 90vw;
     padding: 30px;
     margin: 0 2vw 40px 2vw; 
     border-radius: 15px; 
-    --color: #E1E1E1;
-    background-color: #F3F3F3;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-    background-size: 55px 55px;
 }
 
 #team .card {
@@ -818,7 +812,7 @@ footer .container .col-sm-7{
     color: black;
 }
 
-.feedback .col-sm-5{
+.feedback .col-sm-3{
     font-size: 20px;
     font-weight: bold;
 }
@@ -868,3 +862,83 @@ footer .footer-brand{
     color: black;
     text-decoration: none;
 }
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.rating > label {
+    margin-right: 4px;
+  }
+  
+  .rating:not(:checked) > input {
+    display: none;
+  }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .rating:not(:checked) > label > svg {
+    fill: #666;
+    transition: fill 0.3s ease;
+  }
+  
+  .rating > input:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  .rating:not(:checked) > label:hover ~ label > svg,
+  .rating:not(:checked) > label:hover > svg {
+    fill: #FFD95F;
+  }
+  
+  #star1:hover ~ label > svg,
+  #star1:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star2:hover ~ label > svg,
+  #star2:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star3:hover ~ label > svg,
+  #star3:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star4:hover ~ label > svg,
+  #star4:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star5:hover ~ label > svg,
+  #star5:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star1:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  #star2:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  #star3:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  #star4:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  #star5:checked ~ label > svg {
+    fill: #FFD95F;
+  }
