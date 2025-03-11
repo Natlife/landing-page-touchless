@@ -86,7 +86,7 @@
     transform: scale(0.4) translate(160px, 150px);
 }
 
-.mentor, .takecare{
+.mentor{
     display: flex;
     justify-content: center;
 }
