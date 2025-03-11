@@ -85,3 +85,8 @@
     transition: 0.3s;
     transform: scale(0.4) translate(160px, 150px);
 }
+
+.mentor, .takecare{
+    display: flex;
+    justify-content: center;
+}
