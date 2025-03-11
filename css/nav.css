@@ -1,0 +1,92 @@
+/* ---------------------------------- nav ---------------------------------- */
+#logo{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin: 0px 20px 0 0;
+    padding: 0;
+}
+
+.navbar-brand{
+    margin-top: 4px
+}
+
+nav{
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10px;
+    color: black;
+    height: 80px;
+    background-color: #ffffff;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-icons{
+    margin-right: 10px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+    font-size: 20px;
+}
+
+.col-sm-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div .col-sm-4{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav button {
+    background-color: #76ABAE;
+    border-radius: 40px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-icons:hover{
+    content: '';
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 40px;
+    text-decoration: none;
+    
+}
+
+.nav-icons:focus{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:active{
+    text-decoration: none;
+    color: black;
+}
+
+nav button:hover{
+    content: '';
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    text-decoration: none;
+}

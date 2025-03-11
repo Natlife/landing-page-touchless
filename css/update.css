@@ -1,8 +1,8 @@
-/*---------------------------------- docs ----------------------------------*/
-#docs{
+
+/*---------------------------------- update ----------------------------------*/
+#updates{
     width: 90vw;
-    padding-bottom: 40px;
-    margin: 0px 2vw 40px 2vw; 
+    margin: 0px 2vw -80px 2vw; 
     border-radius: 15px; 
     position: relative;
     display: flex;
@@ -10,8 +10,9 @@
     flex-direction: column-reverse;
 }
 
-#docs .bground{
+#updates .bground{
     height: 100%;
+    padding-bottom: 100px;
     position: relative;
     text-align: center; 
     display: flex; 
@@ -20,12 +21,11 @@
     flex-direction: column;
 }
 
-#docs .docsHead{
-    color: white;
+#updates .updHead{
     font-size: 30px;
     position: relative;
-    width: 600px;
-    height: 100px;
+    width: 500px;
+    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@
     border-bottom-right-radius: 25px;
 }
 
-#docs .bground::before{
+#updates .bground::before{
     content: '';
     position: absolute;
     width: 25px;
@@ -45,22 +45,22 @@
     border-radius: 40%;
     box-shadow: -10px -10px 0  #31363F;
     top: 0;
-    left: 0px;
+    left: 15px;
 }
 
-#docs .bground::after{
+#updates .bground::after{
     content: '';
     position: absolute;
     width: 25px;
     height: 25px;
-    background-color: transparent;
+    background: transparent;
     border-radius: 40%;
     box-shadow: -10px -10px 0  #31363F;
-    top: -100px;
-    left: 600px;
+    top: -130px;
+    left: 515px;
 }
 
-#docs .docsHead::before{
+#updates .updHead::before{
     content: '';
     position: absolute;
     width: 25px;
@@ -68,11 +68,11 @@
     background: transparent;
     border-radius: 40%;
     box-shadow: 10px -10px 0  #31363F;
-    top: 0px;
+    top: 0;
     right: 0;
 }
 
-#docs .docsHead::after{
+#updates .updHead::after{
     content: '';
     position: absolute;
     width: 25px;
@@ -84,24 +84,30 @@
     left: 0;
 }
 
-.title {
-    background-color: white;
-    color: black;
-    padding: 10px;
-    cursor: pointer;
-    margin: 5px 0;
-    font-weight: bold;
-    font-size: 200%;
-    border-bottom: 2px solid transparent; /* Để tránh màu viền mặc định */
-    border-image: linear-gradient(90deg, black, white);
-    border-image-slice: 1;
+
+
+div img {
+    width: 600px;
+    border-radius: 10px;
+    padding: 0;
+    margin: 20px;
 }
 
+div .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.content {
-    display: none; 
-    padding: 20px;
-    background-color: white;
-    border-left: 2px solid black;
-    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.7);
+div .carousel-inner {
+    width: 650px;
+    padding-left: 3px;
+    box-shadow: 0 0 0 2px rgb(0, 0, 0), 8px 8px 0 0 rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+div #myCarousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

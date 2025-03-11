@@ -1,0 +1,170 @@
+/*---------------------------------- download ----------------------------------*/
+#download{
+    width: 90vw;
+    margin: 0 2vw 40px 2vw; 
+    border-radius: 15px; 
+   background-size: 55px 55px;
+}
+
+#download h1{
+    font-size: 40px;
+}
+
+#download #lastest-verDownload {
+    margin-top: 135px;
+    padding: 1.25em;
+    text-align: center;
+}
+
+#download .row {
+    padding: 0;
+    height: 110vh;
+}
+
+/*
+Button RGB Color Stuffs
+*/
+
+.rainbow-button {
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+  }
+.rainbow-button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
+  /* glow */
+.rainbow-button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+  
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+  
+  /* hover */
+.rainbow-button:hover::before {
+    opacity: 1;
+  }
+  
+.rainbow-button:active:after {
+    background: transparent;
+  }
+  
+.rainbow-button:active {
+    color: #000;
+    font-weight: bold;
+  }
+
+/*
+Rainbow button over
+*/
+
+#list-version {
+    padding: 1.25em;
+    border-top: 2px solid black;
+}
+
+.download-list-table tbody tr:nth-child(odd),
+.download-list-mobile .version-item:nth-child(odd) {
+    background-color: #f2f4f6;
+}
+
+/*
+Desktop responsive
+*/
+
+#download .table-container {
+    max-height: 30vh;
+    overflow-y: scroll;
+}
+
+#download .download-list-table {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+/* Custom Scrollbar cho modern browsers */
+
+#download .table-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+#download .table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#download .table-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+#download .table-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*
+Mobile responsive
+*/
+
+#download .download-list-mobile .version-item {
+    padding: 15px;
+}
+
+#download .release-ver {
+    display: inline-block;
+    width: 20%;
+}
+
+#download .release-date {
+    width: 30%;
+    display: inline-block;
+
+}
+
+#download .release-download {
+    width: 25%;
+    display: inline-block;
+
+}
+
+#download .release-note {
+    width: 25%;
+    display: inline-block;
+
+}

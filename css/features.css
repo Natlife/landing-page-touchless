@@ -1,0 +1,57 @@
+/*---------------------------------- features ----------------------------------*/
+#ftures{
+    width: 90vw;
+    padding: 30px;
+    margin: 40px 2vw 40px 2vw; 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center !important; 
+}
+
+#features .fts-name {
+    margin: 0 220px -50px 220px;
+    padding-bottom: 25px;
+    width: 800px;
+    font-size: 50px;
+    border-bottom: #31313169 2px solid;
+    text-align: center;
+}
+
+#features .row{
+    width: 1200px;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+#features .fts-card{
+    background-color: white;
+    border-radius: 12px;
+    margin: 39px;
+    padding:20px 5px 20px 5px;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 400ms;
+}
+
+#features .col-sm-4{
+    display: flex;
+    justify-content: space-around;
+}
+
+#features .icon{
+    font-size: 50px;
+}
+
+.row .fts-card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+.row:hover > .fts-card:not(:hover) {
+    transform: scale(0.9, 0.9);
+}

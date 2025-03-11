@@ -1,0 +1,167 @@
+/*---------------------------------- footer ----------------------------------*/
+footer{
+    background-color: #ffffff;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .container .col-sm-7{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.feedback, .information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid #31363f2c;  
+}
+
+.credit{
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    padding: 20px 0px 20px 0px;
+    font-size: 10px;
+    color: black;
+}
+
+.feedback .col-sm-3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.feedback input{
+    width: 400px;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    font-size: 16px;
+}
+
+.feedback button{
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    background: #76ABAE;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+
+.information .col-sm-5{
+    display: flex;
+    right: 155px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .footer-brand{
+    font-size: 30px;
+
+}
+
+.credit a{
+    color: black;
+    text-decoration: none;
+}
+
+.credit a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.rating > label {
+    margin-right: 4px;
+  }
+  
+  .rating:not(:checked) > input {
+    display: none;
+  }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .rating:not(:checked) > label > svg {
+    fill: #666;
+    transition: fill 0.3s ease;
+  }
+  
+  .rating > input:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  .rating:not(:checked) > label:hover ~ label > svg,
+  .rating:not(:checked) > label:hover > svg {
+    fill: #FFD95F;
+  }
+  
+  #star1:hover ~ label > svg,
+  #star1:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star2:hover ~ label > svg,
+  #star2:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star3:hover ~ label > svg,
+  #star3:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star4:hover ~ label > svg,
+  #star4:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star5:hover ~ label > svg,
+  #star5:hover > svg {
+    fill: #FFD95F !important;
+  }
+  
+  #star1:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  #star2:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  #star3:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  #star4:checked ~ label > svg {
+    fill: #FFD95F;
+  }
+  
+  #star5:checked ~ label > svg {
+    fill: #FFD95F;
+  }
