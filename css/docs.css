@@ -96,6 +96,10 @@
     border-image: linear-gradient(90deg, black, white);
     border-image-slice: 1;
 }
+.title.disabled{
+    background-color: grey ;
+    pointer-events: none;
+}
 
 
 .content {

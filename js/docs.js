@@ -17,21 +17,37 @@ $(document).ready(function(){
                 // adding with id
                 const titleElement = $('<div class="title" id="title' + (index + 1) + '">' + title + '</div>');
                 const contentElement = $('<div class="content" id="content' + (index + 1) + '" style="display:none;">' + content + '</div>');
-                $('.content-page').append(titleElement);
+                $('.docs-left').append(titleElement);
                 $('.content-page').append(contentElement);
             });
             //click to title event
+            // $(".title").click(function(){
+            //     // Lấy ID titel
+            //     var titleId = $(this).attr("id");
+            //     var contentId = "content" + titleId.charAt(titleId.length - 1);
+            //     // lấy id content ứng title
+            //     var content = $("#" + contentId);
+            //     if (content.is(":visible")) {
+            //         content.slideUp();
+            //     } else {
+            //         content.slideDown();
+            //     }
+            // });
+
+            //title duoc click se ve trang thai readonly
+            //khi an vao title nao do se tat content hien tai roi moi goi content moi
             $(".title").click(function(){
-                // Lấy ID titel
                 var titleId = $(this).attr("id");
                 var contentId = "content" + titleId.charAt(titleId.length - 1);
-                // lấy id content ứng title
                 var content = $("#" + contentId);
-                if (content.is(":visible")) {
-                    content.slideUp();
-                } else {
-                    content.slideDown();
+                if ($(this).hasClass('disabled')) {
+                    return; 
                 }
+                $(".title").removeClass('disabled').css('pointer-events', 'auto').css('background-color','white');
+                $(this).addClass('disabled');
+
+                $(".content").slideUp(); 
+                content.slideDown();
             });
         });
 });
