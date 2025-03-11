@@ -13,18 +13,16 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navigate navbar navbar-inverse navbar-fixed-top" id="navbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <img class="navbar-brand" id="logo" src="img/logo.jpg">
-                <span class="navbar-brand" style="font-size: 30px; color: #000;"> touchless </span>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html"> home</a></li>
-                <li><a href="docs.html"> documentation</a></li>
-                <li><a href="download.html"> download</a></li>
-                <li><a href="about.html"> about</a></li>
-            </ul>
+    <nav class="row navbar navbar-default navbar-fixed-top" >
+        <div class="col-sm-4">
+            <img class="navbar-brand" id="logo" src="img/logo.jpg" >
+            <span class="navbar-brand" style="font-size: 30px; color: #000;"> touchless </span>
+        </div>
+        <div class="col-sm-8 icons">
+            <a class="nav-icons col-sm-3" href="./index.html">Home</a>
+            <a class="nav-icons col-sm-3" href="./docs.html">Docs</a>
+            <a class="nav-icons col-sm-3" href="./about.html">About</a>
+            <button class="nav-btn col-sm-3"><a href="./download.html" style="text-decoration: none; color: rgb(255, 255, 255);">Download</a></button>
         </div>
     </nav>
 
