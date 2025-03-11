@@ -84,6 +84,17 @@
     left: 0;
 }
 
+.docs-body{
+    padding: 10px 20px;
+    background-color: #76ABAE;
+}
+
+.docs-left, .content-page{
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
 .title {
     background-color: white;
     color: black;
@@ -92,12 +103,14 @@
     margin: 5px 0;
     font-weight: bold;
     font-size: 200%;
+    border-radius: 20px;
     border-bottom: 2px solid transparent; /* Để tránh màu viền mặc định */
     border-image: linear-gradient(90deg, black, white);
     border-image-slice: 1;
+    transition: background-color 0.5s ease-in-out;
 }
 .title.disabled{
-    background-color: grey ;
+    background-color: grey !important ;
     pointer-events: none;
 }
 
@@ -105,7 +118,8 @@
 .content {
     display: none; 
     padding: 20px;
-    background-color: white;
-    border-left: 2px solid black;
-    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.7);
+    background-color: aliceblue;
+    border: 1px,solid,#31363F;
+    border-radius: 20px;
+    width: 100%;
 }
