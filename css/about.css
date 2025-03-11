@@ -41,11 +41,11 @@ h2 {
     padding: 48px; 
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out; /* Hiệu ứng chuyển đổi mượt */
+    transition: box-shadow 0.3s ease-in-out; 
 }
 
 .feature:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng khi hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
     
 #feature:hover {
@@ -57,9 +57,11 @@ h2 {
     margin-bottom: 0;
 }
 
+h3 {
+    font-weight: 900px;
+}
 .nameft {
     font-size: 20px;
-    font-weight: 600;
     color:#111827;
     margin-bottom: -48px;
 }
