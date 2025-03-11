@@ -37,7 +37,7 @@
             <button class="nav-btn col-sm-3"><a href="#download" style="text-decoration: none; color: rgb(255, 255, 255);">Download</a></button>
         </div> -->
         <div class="col-sm-8 icons">
-            <a class="nav-icons col-sm-3" href="./index.html">Home</a>
+            <a class="nav-icons col-sm-3" href="#home">Home</a>
             <a class="nav-icons col-sm-3" href="#ftures">Features</a>            
             <a class="nav-icons col-sm-3" href="#updates">Updates</a>            
             <a class="nav-icons col-sm-3" href="#docs">Docs</a>
@@ -488,6 +488,20 @@
 
     <!-- script -->
     <script>
+        const links = document.querySelectorAll('nav a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                targetSection.scrollIntoView({
+                    behavior: 'smooth' 
+                });
+            });
+        });
         window.addEventListener("scroll", () => {
             const navbar = document.getElementById("navbar");
             if (window.scrollY === 0) {
