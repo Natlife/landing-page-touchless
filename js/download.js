@@ -34,6 +34,12 @@ $(document).ready(function () {
                     downloadButton = `<a href="${downloadUrl}" class="btn btn-primary btn-sm">Download</a>`;
                 }
 
+                if (index === 0) {
+                    $('#download-button').click(function () {
+                        window.location.href = downloadUrl;
+                    });
+                }
+
                 // Tạo liên kết ghi chú phát hành
                 let releaseNotes = '';
                 if (status !== 'coming_soon' && notesUrl) {
