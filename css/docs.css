@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --color-1: #ffffff;
+  --text-color: #000000;
+  --accent-color: #0000004d;
+  --btn-text-color: #ffffff;
+  --btn-color: #001f4c;
+  --bg-color: #313131;
+}
 /*---------------------------------- docs ----------------------------------*/
 #docs{
-    width: 90vw;
-    padding-bottom: 40px;
-    margin: 0px 2vw 40px 2vw; 
-    border-radius: 15px; 
+    margin-top: 40px;
+    padding: 50px;
+    padding-bottom: 100px;
+    border-radius: 15px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -27,11 +36,13 @@
     width: 600px;
     height: 100px;
     display: flex;
+    bottom: 50px;
+    right: 50px;
     justify-content: center;
     align-items: center;
     background-color: #76ABAE;
-    border-bottom: 10px solid #31363F;
-    border-right: 10px solid #31363F;
+    border-bottom: 10px solid var(--bg-color);
+    border-right: 10px solid var(--bg-color);
     border-top-left-radius: 15px;
     border-bottom-right-radius: 25px;
 }
@@ -41,9 +52,9 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    background: transparent;
+    background-color: red;
     border-radius: 40%;
-    box-shadow: -10px -10px 0  #31363F;
+    box-shadow: -10px -10px 0 var(--bg-color);
     top: 0;
     left: 0px;
 }
@@ -53,11 +64,11 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    background-color: transparent;
+    background-color: red;
     border-radius: 40%;
-    box-shadow: -10px -10px 0  #31363F;
-    top: -100px;
-    left: 600px;
+    box-shadow: -10px -10px 0  var(--bg-color);
+    top: 0px;
+    left: 0;
 }
 
 #docs .docsHead::before{
@@ -67,7 +78,7 @@
     height: 25px;
     background: transparent;
     border-radius: 40%;
-    box-shadow: 10px -10px 0  #31363F;
+    box-shadow: 10px -10px 0 var(--bg-color);
     top: 0px;
     right: 0;
 }
@@ -79,7 +90,7 @@
     height: 25px;
     background:transparent;
     border-radius: 40%;
-    box-shadow: -10px 10px 0  #31363F;
+    box-shadow: -10px 10px 0  var(--bg-color);
     bottom: 0;
     left: 0;
 }

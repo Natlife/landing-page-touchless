@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> Bootstrap3 adding -->
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/meteorShowerBg.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/test.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/features.css">
@@ -13,43 +18,39 @@
     <link rel="stylesheet" href="css/docs.css">
     <link rel="stylesheet" href="css/team.css">
     <link rel="stylesheet" href="css/footer.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <title>Touchless - Interactive Device Control</title>
+    <title>Touchless</title>
 </head>
-
-<body style="overflow-x: hidden; font-family: 'Century Gothic','TeXGyreAdventor','STHeiti',sans-serif; background-color: #31363F;">
+<body>
+    <!-- <canvas id="bgCanvas" style=" z-index: -1;"></canvas>
+    <canvas id="terCanvas" style=" z-index: -1;"></canvas> -->
     <!-- navbar -->
-    <nav class="row navbar navbar-fixed-top" >
-        <div class="col-sm-4">
+    <nav class="navbar-fixed-top">
+        <a class="home-link" href="test.html">
             <img class="navbar-brand" id="logo" src="img/logo.jpg" >
-            <span class="navbar-brand" style="font-size: 30px; color: #000;"> touchless </span>
+            <span class="navbar-brand"> touchless </span>
+        </a> 
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+        
+            <a href="#features">Features</a> 
+            <a href="#updates">Updates</a>
+            <a href="#docs">Docs</a>
+            <a href="#team">About</a>
+            <a href="#download" class="dl-btn">Download</a>
         </div>
-        <!-- <div class="sidebar">
-            <a class="" href="./index.html">Home</a>
-            <a class="nav-icons col-sm-3" href="#ftures">Features</a>            
-            <a class="nav-icons col-sm-3" href="#updates">Updates</a>            
-            <a class="nav-icons col-sm-3" href="#docs">Docs</a>
-            <a class="nav-icons col-sm-3" href="#team">About</a>
-            <button class="nav-btn col-sm-3"><a href="#download" style="text-decoration: none; color: rgb(255, 255, 255);">Download</a></button>
-        </div> -->
-        <div class="col-sm-8 icons">
-            <a class="nav-icons col-sm-3" href="#home">Home</a>
-            <a class="nav-icons col-sm-3" href="#ftures">Features</a>            
-            <a class="nav-icons col-sm-3" href="#updates">Updates</a>            
-            <a class="nav-icons col-sm-3" href="#docs">Docs</a>
-            <a class="nav-icons col-sm-3" href="#team">About</a>
-            <button class="nav-btn col-sm-3"><a href="#download" style="text-decoration: none; color: rgb(255, 255, 255);">Download</a></button>
-        </div>
-    </nav>
+    </nav>      
 
     <!-- home -->
-    <section id="home" class="bgdefault">
+    <section id="home" class=" ssbg ">
         <div class="imgBx"> 
-            <h2 style="font-size: 80px;">touchless</h2>
+            <h2>touchless</h2>
             <p class="quote">
                 /*
                 <span class="typed-quote"></span>
@@ -58,75 +59,69 @@
             </p>
         </div>
         <div style="height: 50px;">
-            <span class="dl-btn" style="font-size: 30px; text-decoration: none; "><a href="./download.html" style="text-decoration: none; color: #ffffff;">Download</a></span>
+            <a class="dl-btn gradient-bg" href="#download"><span>Download</span></a>
         </div>
+        
     </section>
-
+    
     <!-- features -->
-    <section id="ftures" class="bgdefault">
-        <!-- Feature -->
-        <section id="features">
-            <div class="fts-name">
+        <section id="features" class="ssbg">
+            <div class="ss-heading">
                 <span>Features</span>
             </div>
-            <div class="row">
-                <div class="fts-card col-sm-4">
-                    <div class="icon">👋</div>
+            <div class="grid-container">
+                <div class="fts-card ">
+                    <span class="icon">👋</span>
                     <h3 class="nameft">Gesture Control</h3>
                     <p class="detail">Control your devices with hand gestures easily without touching them.</p>
                 </div>
-                <div class="fts-card col-sm-4">
-                    <div class="icon">📷</div>
+                <div class="fts-card ">
+                    <span class="icon">📷</span>
                     <h3 class="nameft">Webcam Detection</h3>
                     <p class="detail">Use the webcam to detect hand gestures and perform actions based on those gestures.</p>
                 </div>
-                <div class="fts-card col-sm-4">
-                    <div class="icon">🛡️</div>
+                <div class="fts-card ">
+                    <span class="icon">🛡️</span>
                     <h3 class="nameft">Error-Free Input</h3>
                     <p class="detail">Eliminate the worry of accidentally pressing the wrong key or typing with one finger unprofessionally.</p>
                 </div>
-                <div class="fts-card col-sm-4">
-                    <div class="icon">✨</div>
+                <div class="fts-card ">
+                    <span class="icon">✨</span>
                     <h3 class="nameft">Innovative UI</h3>
                     <p class="detail">The future of user interfaces: A fresh, exciting, and super cool experience with novel technology.</p>
                 </div>
-                <div class="fts-card col-sm-4">
-                    <div class="icon">📽️</div>
+                <div class="fts-card ">
+                    <span class="icon">📽️</span>
                     <h3 class="nameft">Presentation Support</h3>
                     <p class="detail">Support creating presentation effects for your slides.</p>
                 </div>
-                <div class="fts-card col-sm-4">
-                    <div class="icon">🧩</div>
+                <div class="fts-card ">
+                    <span class="icon">🧩</span>
                     <h3 class="nameft">Intuitive Experience</h3>
                     <p class="detail">An intuitive, user-friendly interface.</p>
                 </div>
             </div>
         </section>
-    </section>
-    
+
     <!-- updates -->
-    <section id="updates" class="bgdefault">
-        <div class="row bground">
-            <div class="container" style="padding: 0px">
-                <!-- des -->
-                <h2 class="col-sm-4">Touchless is a application that allows users to interact with their devices without touching them. </h2>  
-                <!-- img -->
-                <div id="myCarousel" class="carousel slide col-sm-8" data-ride="carousel" style="padding: 0px" >
-                    <div class="carousel-inner">
-                        <div class="item active"> <img src="img/1.jpg"></div>
-                        <div class="item"> <img src="img/2.jpg"> </div>
-                        <div class="item"> <img src="img/3.jpg"></div>
-                    </div>
+    <section id="updates" class="ssbg">
+        <div class="ss-heading">
+            <span>Updates</span>
+        </div>
+        <div class="row">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+                <div class="carousel-inner">
+                    <div class="item active"> <img src="img/1.jpg"></div>
+                    <div class="item"> <img src="img/2.jpg"> </div>
+                    <div class="item"> <img src="img/3.jpg"></div>
                 </div>
             </div>
-        </div>
-        <div class="updHead">
-            <span style="color: #fff;">Updates (10/3/2025)</span>
+            <h2 class="upd-contents">Touchless is a application that allows users to interact with their devices without touching them. </h2>  
         </div>
     </section>
 
     <!-- download -->
-    <section id="download" class="container-fluid bgdefault" style="margin-top: 120px;">
+    <section id="download" class="container-fluid ssbg" style="margin-top: 120px;">
         <div class="row">
             <!-- Section Download lastest Version-->
             
@@ -170,7 +165,7 @@
     <script src="js/download.js"></script>
 
     <!-- docs -->
-    <section id="docs" class="bgdefault">
+    <section id="docs" class="ssbg">
         <div class="container docs-body">
             <div class="docs-left col-md-3">
                 <!-- class="title" id="title+(i)" -->
@@ -185,10 +180,10 @@
         
     </section>
     <script src="js/docs.js"></script>
-    
+
     <!-- Team Section -->
-    <section id="team" class="row bgdefault">
-        <div class="mentor col-sm-12">
+    <section id="team" class="parent ssbg">
+        <div class="div1">
             <div class="card">
                 <div class="card-photo" style="background: url(img/Vu.png); background-size: 100%;"></div>
                 <div class="card-title"> Nguyen Tuan Vu <br>
@@ -208,7 +203,7 @@
             </div>
         </div>
 
-        <div class="takecare col-sm-3">
+        <div class="div2 ">
             <div class="card">
                 <div class="card-photo" style="background: url(img/Minh.jpg); background-size: 100%;"></div>
                 <div class="card-title">Pham Vu Thai Minh <br>
@@ -228,7 +223,7 @@
             </div>
         </div>
 
-        <div class="takecare col-sm-3">
+        <div class="div3 ">
             <div class="card">
                 <div class="card-photo" style="background: url(img/Huy.jpg); background-size: 100%;"></div>
                 <div class="card-title">Tran Ngoc Huy <br>
@@ -248,7 +243,7 @@
             </div>
         </div>
 
-        <div class="takecare col-sm-3">
+        <div class="div4 ">
             <div class="card">
                 <div class="card-photo" style="background: url(img/Mai.jpg); background-size: 100%;"></div>
                 <div class="card-title">Nguyen Thanh Mai <br>
@@ -268,7 +263,7 @@
             </div>
         </div>
 
-        <div class="takecare col-sm-3">
+        <div class="div5 ">
             <div class="card">
                 <div class="card-photo" style="background: url(img/Hao.jpg); background-size: 100%;"></div>
                 <div class="card-title">Nguyen Huy Hao <br>
@@ -288,7 +283,7 @@
             </div>
         </div>
 
-        <div class="member col-sm-2">
+        <div class="div6">
             <div class="card">
                 <div class="card-photo" style="background: url(img/TheAnh.jpg); background-size: 100%;"></div>
                 <div class="card-title">Nguyen The Anh <br>
@@ -308,7 +303,7 @@
             </div>
         </div>
        
-        <div class="member col-sm-2">
+        <div class="div7 ">
             <div class="card">
                 <div class="card-photo" style="background: url(img/Luong.jpg); background-size: 100%;"></div>
                 <div class="card-title">Ngo Duc Luong <br>
@@ -328,7 +323,7 @@
             </div>
         </div>
 
-        <div class="member col-sm-2">
+        <div class="div8 ">
             <div class="card">
                 <div class="card-photo" style="background: url(img/Thang.jpg); background-size: 100%;"></div>
                 <div class="card-title">Tang Toan Thang<br>
@@ -348,7 +343,7 @@
             </div>
         </div>
 
-        <div class="member col-sm-2">
+        <div class="div9 ">
             <div class="card">
                 <div class="card-photo" style="background: url(img/Duy.jpg); background-size: 100%;"></div>
                 <div class="card-title">Chung Van Duy <br>
@@ -368,7 +363,7 @@
             </div>
         </div>
         
-        <div class="member col-sm-2">
+        <div class="div10 ">
             <div class="card">
                 <div class="card-photo" style="background: url(img/Huyen.jpg); background-size: 100%;"></div>
                 <div class="card-title">Ngo Thuong Huyen <br>
@@ -388,10 +383,11 @@
             </div>
         </div>
 
-        <div class="member col-sm-2">
+        <div class="div11 ">
             <div class="card">
-                <div class="card-photo" style="background: url(img/Son.jpg); background-size: 100%;"></div>
-                <div class="card-title">Phan Nguyen Truong Son <br>
+                <div class="card-photo" style="background: url(img/Son.jpg); background-size: 100%;" ></div>
+                <div class="card-title">
+                    <span style="font-size: 15px;">Phan Nguyen Truong Son</span> <br>
                     <span>Member</span>
                 </div>
                 <div class="card-socials">
@@ -409,11 +405,12 @@
         </div>
     </section>
 
+
     <!-- footer -->
     <footer class="row">
         <div class="feedback container">
-            <div class="col-sm-3">Help us improve our app by rating and giving feedback</div>
-            <div class="rating col-sm-2">
+            <div class="">Help us improve our app by rating and giving feedback</div>
+            <div class="rating ">
                 <input type="radio" id="star5" name="rate" value="5" />
                 <label title="Excellent!" for="star5">
                   <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
@@ -479,8 +476,7 @@
         </div>
     </footer>
 
-
-    <!-- script -->
+    <!-- scripts -->
     <script>
         const links = document.querySelectorAll('nav a');
 
@@ -560,4 +556,4 @@
         });
     </script>
 </body>
-    
+</html>

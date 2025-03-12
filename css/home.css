@@ -1,13 +1,18 @@
-/*---------------------------------- home ----------------------------------*/
+
+
 #home{
     height: 620px;
-    margin-top: 120px;
+    top: 100px;
     width: 90vw;
     border-radius: 15px; 
-    position: relative;
     display: flex;
+    position: relative;
     justify-content: space-between;
     flex-direction: column;
+}
+
+#home h2{
+    font-size: 80px;
 }
 
 #home .imgBx{
@@ -18,10 +23,11 @@
     justify-content: center; 
     align-items: center; 
     flex-direction: column;
-    
 }
 
 #home .dl-btn{
+    font-size: 30px;
+    color: var(--btn-text-color);
     position: relative;
     top: -50px;
     width: 300px;
@@ -29,11 +35,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #76ABAE;
-    border-top: 10px solid #31363F;
-    border-right: 10px solid #31363F;
+    background-color: var(--text-color);
+    border-top: 10px solid var(--bg-color);
+    border-right: 10px solid var(--bg-color);
     border-top-right-radius: 25px;
     border-bottom-left-radius: 15px;
+    transition: 0.3s;
 }
 
 #home .dl-btn::before{
@@ -43,7 +50,7 @@
     height: 25px;
     background: transparent;
     border-radius: 40%;
-    box-shadow: -10px -10px 0  #31363F;
+    box-shadow: -10px -10px 0  var(--bg-color);
     top: 0;
     left: 0;
 }
@@ -55,7 +62,7 @@
     height: 25px;
     background:transparent;
     border-radius: 40%;
-    box-shadow: 10px 10px 0  #31363F;
+    box-shadow: 10px 10px 0 var(--bg-color);
     bottom: 0;
     right: 0;
 }
@@ -67,7 +74,7 @@
     height: 25px;
     background: transparent;
     border-radius: 40%;
-    box-shadow: -10px 10px 0  #31363F;
+    box-shadow: -10px 10px 0  var(--bg-color);
     bottom: 50px;
     left: 0;
 }
@@ -79,12 +86,57 @@
     height: 25px;
     background:transparent;
     border-radius: 40%;
-    box-shadow: -10px 10px 0  #31363F;
+    box-shadow: -10px 10px 0  var(--bg-color);
     bottom: -50px;
     left: 300px;
 }
 
-.dl-btn:hover{
+#home .dl-btn:hover{
     cursor: pointer;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-decoration: none;
+    color: var(--btn-text-color);
+}
+
+#home .dl-btn:hover span{
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@media(max-width: 425px){
+    #home{
+        height: 400px;
+    }
+
+    #home h2{
+        font-size: 30px;
+    }
+    .dl-btn{
+        border-radius: 0 0 15px 15px!important;
+        border-top: 10px solid var(--bg-color) !important;
+        border-right: 0 !important;
+    }
+    #home .dl-btn{
+        font-size: 20px;
+        width: 100%;
+    } 
+    #home .dl-btn::before{
+        box-shadow:none;
+    }
+
+    #home .dl-btn::after{
+        box-shadow:none;
+    }
+
+    #home .imgBx::before{
+        box-shadow:none;
+    }
+
+    #home .imgBx::after{
+        box-shadow:none;
+    }
+}
+
+@media(max-width: 768px){
+    #home{
+        height: 480px;
+    }
 }

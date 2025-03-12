@@ -1,113 +1,55 @@
 
 /*---------------------------------- update ----------------------------------*/
 #updates{
-    width: 90vw;
-    margin: 0px 2vw -80px 2vw; 
-    border-radius: 15px; 
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column-reverse;
-}
-
-#updates .bground{
-    height: 100%;
+    margin-top: 40px;
+    padding: 50px;
     padding-bottom: 100px;
-    position: relative;
-    text-align: center; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
-#updates .updHead{
-    font-size: 30px;
-    position: relative;
-    width: 500px;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #76ABAE;
-    border-bottom: 10px solid #31363F;
-    border-right: 10px solid #31363F;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 25px;
-}
-
-#updates .bground::before{
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background: transparent;
-    border-radius: 40%;
-    box-shadow: -10px -10px 0  #31363F;
-    top: 0;
-    left: 15px;
-}
-
-#updates .bground::after{
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background: transparent;
-    border-radius: 40%;
-    box-shadow: -10px -10px 0  #31363F;
-    top: -130px;
-    left: 515px;
-}
-
-#updates .updHead::before{
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background: transparent;
-    border-radius: 40%;
-    box-shadow: 10px -10px 0  #31363F;
-    top: 0;
-    right: 0;
-}
-
-#updates .updHead::after{
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background:transparent;
-    border-radius: 40%;
-    box-shadow: -10px 10px 0  #31363F;
-    bottom: 0;
-    left: 0;
-}
-
-
-
 div img {
-    width: 600px;
+    width: 100%;
     border-radius: 10px;
     padding: 0;
-    margin: 20px;
-}
-
-div .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
 }
 
 div .carousel-inner {
-    width: 650px;
-    padding-left: 3px;
+    width: 800px;
     box-shadow: 0 0 0 2px rgb(0, 0, 0), 8px 8px 0 0 rgb(0, 0, 0);
     border-radius: 10px;
 }
 
-div #myCarousel{
+#myCarousel{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 425px){
+    #updates .upd-contents{
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    #updates h2{
+        font-size: 15px;
+        padding: 0 30px 0 30px;
+    }
+    #updates {
+        padding: 20px;
+    }
+    div .row{
+        margin: 20px;
+    }
+    div .carousel-inner{
+        width: 70vw;
+        margin-bottom: 40px;
+    }
 }

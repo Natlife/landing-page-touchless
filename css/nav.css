@@ -1,4 +1,12 @@
-/* ---------------------------------- nav ---------------------------------- */
+nav{
+    width: 100vw !important;
+    height: 80px;
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 #logo{
     width: 55px;
     height: 55px;
@@ -8,85 +16,118 @@
 }
 
 .navbar-brand{
-    margin-top: 4px
+    margin-top: 4px;
+    font-size: 35px; 
+    color: #000;
 }
 
-nav{
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 10px;
-    color: black;
-    height: 80px;
-    background-color: #ffffff;
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 nav a{
-    color: black;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-}
-
-.nav-icons{
-    margin-right: 10px;
-    height: 50px;
+    color: var(--text-color);
     transition: 0.3s;
 }
 
-.icons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60px;
-    font-size: 20px;
+nav a:hover{  
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.col-sm-3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav .home-link{
+    padding-right: 0px;
+    margin-right: 0;
 }
 
-div .col-sm-4{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+nav svg{
+    fill: var(--text-color);
 }
 
-nav button {
-    background-color: #76ABAE;
-    border-radius: 40px;
+#sidebar-active{
+    display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+
+nav .dl-btn {
+    padding-right: 30px;
+    background-color: var(--btn-color);
+    margin-right:0 ;
     border: none;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    color: var(--btn-text-color);
+    font-size: 30px;
 }
 
-.nav-icons:hover{
-    content: '';
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    border-radius: 40px;
+nav .dl-btn:hover{
+    cursor: pointer;
     text-decoration: none;
+    color: var(--btn-text-color);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+nav a:hover{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+@media(max-width: 425px){
+    .navbar-brand{
+        font-size: 25px; 
+    }
     
 }
 
-.nav-icons:focus{
-    text-decoration: none;
-    color: black;
-}
+@media(max-width: 768px){
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
 
-nav a:hover{
-    text-decoration: none;
-    color: black;
-}
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
 
-nav a:active{
-    text-decoration: none;
-    color: black;
-}
-
-nav button:hover{
-    content: '';
-    transition: 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    text-decoration: none;
+        background-color: var(--color-1);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.75s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        padding: 20px;
+        display: block;
+    }
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
 }
