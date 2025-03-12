@@ -48,6 +48,10 @@ a:focus{
     background-size: 55px 55px;
     width: 90vw;
     margin: 20px auto 20px auto;
+
+    /* element chinh scroll effect chong chi dinh dong vao */
+    /* scroll-margin-top: 90px; */
+    /* ------------------------------- */
 }
 
 .ss-heading{

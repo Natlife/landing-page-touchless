@@ -25,7 +25,7 @@
     <canvas id="terCanvas" style=" z-index: -1;"></canvas> -->
     <!-- navbar -->
     <nav class="navbar-fixed-top">
-        <a class="home-link" href="test.html">
+        <a class="home-link" href="#home">
             <img class="navbar-brand" id="logo" src="img/logo.jpg" >
             <span class="navbar-brand"> touchless </span>
         </a> 
@@ -59,7 +59,7 @@
             </p>
         </div>
         <div style="height: 50px;">
-            <a class="dl-btn gradient-bg" href="#download"><span>Download</span></a>
+            <a class="dl-btn gradient-bg" id="down-head" href="#download"><span>Download</span></a>
         </div>
         
     </section>
@@ -170,8 +170,10 @@
             <div class="docs-left col-md-3">
                 <!-- class="title" id="title+(i)" -->
             </div>
-            <div class="content-page col-md-9">
-                 <!-- class="content" id="content+(i)" -->
+            <div class="docs-right col-md-9">
+                <div class="content-page">
+                    <!-- class="content" id="content+(i)" -->
+               </div>
             </div>
         </div>
         <div class="docsHead">
@@ -479,17 +481,26 @@
     <!-- scripts -->
     <script>
         const links = document.querySelectorAll('nav a');
+        const downHeadLink = document.getElementById('down-head');
+        const linksArray = Array.from(links);
+        linksArray.push(downHeadLink);
 
-        links.forEach(link => {
+        linksArray.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
 
                 const targetId = this.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    const headerOffset = 90; // set height header default
+                    const elementPosition = targetSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-                targetSection.scrollIntoView({
-                    behavior: 'smooth' 
-                });
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
         window.addEventListener("scroll", () => {

@@ -36,18 +36,44 @@ $(document).ready(function(){
 
             //title duoc click se ve trang thai readonly
             //khi an vao title nao do se tat content hien tai roi moi goi content moi
-            $(".title").click(function(){
+            // $(".title").click(function(){
+            //     var titleId = $(this).attr("id");
+            //     var contentId = "content" + titleId.charAt(titleId.length - 1);
+            //     var content = $("#" + contentId);
+            //     if ($(this).hasClass('disabled')) {
+            //         return; 
+            //     }
+            //     $(".title").removeClass('disabled').css('pointer-events', 'auto').css('background-color','white');
+            //     $(this).addClass('disabled');
+
+            //     $(".content").slideUp(); 
+            //     content.slideDown();
+            // });
+
+            $(".title").click(function() {
                 var titleId = $(this).attr("id");
                 var contentId = "content" + titleId.charAt(titleId.length - 1);
                 var content = $("#" + contentId);
+        
                 if ($(this).hasClass('disabled')) {
                     return; 
                 }
-                $(".title").removeClass('disabled').css('pointer-events', 'auto').css('background-color','white');
+        
+                $(".title").removeClass('disabled').css('pointer-events', 'auto').css('background-color', 'white');
                 $(this).addClass('disabled');
-
+        
                 $(".content").slideUp(); 
                 content.slideDown();
+        
+                var docsLeft = $(".docs-left");
+                var contentHeight = $(".content-page").outerHeight();
+        
+                // docs-left height update
+                if (contentHeight > docsLeft.outerHeight()) {
+                    docsLeft.height(contentHeight);
+                } else {
+                    docsLeft.height('700px'); 
+                }
             });
         });
 });
