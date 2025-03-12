@@ -72,7 +72,7 @@ $(document).ready(function(){
                 if (contentHeight > docsLeft.outerHeight()) {
                     docsLeft.height(contentHeight);
                 } else {
-                    docsLeft.height('700px'); 
+                    docsLeft.height('500px'); 
                 }
             });
         });
