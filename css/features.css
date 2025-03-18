@@ -2,7 +2,6 @@
 #features{
     margin-top: 140px;
     padding: min(50px, 7%);
-    border-radius: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -11,18 +10,21 @@
 .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    gap: 15px;
+    gap: 30px;
     justify-content: center;
   }
 
   
   
 #features .fts-card{
-      padding: 2em;
-      border: 1px solid rgb(75, 82, 92);
-      border-radius: 10px;
-      background-color: var(--color-1);
-      text-align: center;
+    border-radius: 10px;
+    color: var(--btn-text-color);
+    padding: 2em;
+    box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
+    -webkit-box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
+    -moz-box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
+    background-color: var(--card-color);
+    text-align: center;
   }
 
 #features .icon{

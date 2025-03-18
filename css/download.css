@@ -1,9 +1,8 @@
 /*---------------------------------- download ----------------------------------*/
 #download{
-    margin-top: 40px;
+    margin-top: 10px;
     padding: 50px;
     padding-bottom: 100px;
-    border-radius: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -14,14 +13,14 @@
 }
 
 #download #lastest-verDownload {
-    margin-top: 135px;
+    margin-top: 0;
     padding: 1.25em;
     text-align: center;
 }
 
 #download .row {
     padding: 0;
-    height: 110vh;
+    height: 100%;
 }
 
 /*
@@ -103,7 +102,7 @@ Rainbow button over
 
 .download-list-table tbody tr:nth-child(odd),
 .download-list-mobile .version-item:nth-child(odd) {
-    background-color: #f2f4f6;
+    background-color: #f1f1f17e;
 }
 
 /*

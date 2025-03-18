@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="./js/meteorShowerBg.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bg.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/home.css">
@@ -18,11 +18,16 @@
     <link rel="stylesheet" href="css/docs.css">
     <link rel="stylesheet" href="css/team.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <title>Touchless</title>
 </head>
 <body>
-    <!-- <canvas id="bgCanvas" style=" z-index: -1;"></canvas>
-    <canvas id="terCanvas" style=" z-index: -1;"></canvas> -->
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+    </div>
     <!-- navbar -->
     <nav class="navbar-fixed-top">
         <a class="home-link" href="#home">
@@ -38,30 +43,37 @@
             <label for="sidebar-active" class="close-sidebar-button">
                 <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </label>
-        
             <a href="#features">Features</a> 
             <a href="#updates">Updates</a>
             <a href="#docs">Docs</a>
             <a href="#team">About</a>
-            <a href="#download" class="dl-btn">Download</a>
+            <a href="#download " class="dl-btn">Download</a>
         </div>
+            
     </nav>      
 
     <!-- home -->
     <section id="home" class=" ssbg ">
-        <div class="imgBx"> 
+        <div class="brand"> 
             <h2>touchless</h2>
-            <p class="quote">
-                /*
-                <span class="typed-quote"></span>
-                <span class="typed-cursor">|</span>
-                */
-            </p>
+            <p>Control your devices with hand gestures </p>
+            <a href="https://github.com/ForeverWeLearn/touchless-vue/releases/tag/pre-release">
+                <button class="dload-btn">Get the lastest version</button>
+            </a>
         </div>
-        <div style="height: 50px;">
-            <a class="dl-btn gradient-bg" id="down-head" href="#download"><span>Download</span></a>
+        <div class="second">
+            <div class="review">
+                <div class="des-img">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+                        <div class="carousel-inner">
+                            <div class="item active"> <img src="img/1.jpg"></div>
+                            <div class="item"> <img src="img/2.jpg"> </div>
+                            <div class="item"> <img src="img/3.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
     </section>
     
     <!-- features -->
@@ -108,15 +120,19 @@
         <div class="ss-heading">
             <span>Updates</span>
         </div>
-        <div class="row">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" >
-                <div class="carousel-inner">
-                    <div class="item active"> <img src="img/1.jpg"></div>
-                    <div class="item"> <img src="img/2.jpg"> </div>
-                    <div class="item"> <img src="img/3.jpg"></div>
+        <div class="des">
+            <div class="des-cnt">
+                <p> something new........</p>
+            </div>
+            <div class="des-img">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+                    <div class="carousel-inner">
+                        <div class="item active"> <img src="img/1.jpg"></div>
+                        <div class="item"> <img src="img/2.jpg"> </div>
+                        <div class="item"> <img src="img/3.jpg"></div>
+                    </div>
                 </div>
             </div>
-            <h2 class="upd-contents">Touchless is a application that allows users to interact with their devices without touching them. </h2>  
         </div>
     </section>
 
@@ -124,8 +140,7 @@
     <section id="download" class="container-fluid ssbg" style="margin-top: 120px;">
         <div class="row">
             <!-- Section Download lastest Version-->
-            
-            <div class="col-lg-6 col-lg-offset-3" id="lastest-verDownload">
+            <div id="lastest-verDownload">
                 <h1>Download lastest version now</h1>
                 <button class="rainbow-button" onclick="window.location.href='https://github.com/ForeverWeLearn/touchless-vue/releases/tag/pre-release'">
                     Download
@@ -176,10 +191,9 @@
                </div>
             </div>
         </div>
-        <div class="docsHead">
+        <div class="ss-heading">
             <span>Documentation for Touchless</span>
         </div>
-        
     </section>
     <script src="js/docs.js"></script>
 
@@ -389,7 +403,7 @@
             <div class="card">
                 <div class="card-photo" style="background: url(img/Son.jpg); background-size: 100%;" ></div>
                 <div class="card-title">
-                    <span style="font-size: 15px;">Phan Nguyen Truong Son</span> <br>
+                    <span>Phan Nguyen Truong Son</span> <br>
                     <span>Member</span>
                 </div>
                 <div class="card-socials">
@@ -409,8 +423,8 @@
 
 
     <!-- footer -->
-    <footer class="row">
-        <div class="feedback container">
+    <footer>
+        <div class="feedback">
             <div class="">Help us improve our app by rating and giving feedback</div>
             <div class="rating ">
                 <input type="radio" id="star5" name="rate" value="5" />
@@ -453,24 +467,41 @@
                     ></path>
                   </svg>
                 </label>
-              </div>
-            <div class="col-sm-7">
+            </div>
+            <div>
                 <form>
                     <input type="text" placeholder="Enter your feedback here">
                     <button>Submit</button>
                 </form>
             </div>
         </div>
-        <div class="information container">
-            <div class="col-sm-5">
-                <span class="footer-brand">touchless</span>
-                <span>Slogan here</span>                  
+        <div class="contacts">
+            <div>
+                <h2>Contacts us: </h2>
+            </div>              
+            <div class="icons">
+                <i class="fas fa-phone-alt"></i>
+                <i class="fas fa-envelope"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-google"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-snapchat"></i>
+                <i class="fab fa-tiktok"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-viber"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-discord"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fas fa-inbox"></i>            
             </div>
-            <div class="col-sm-7">2asd</div>
         </div>
-        <div class="credit container">
-            <div class="col-sm-5">2025 Team3-JSC-FPTU</div>
-            <div class="col-sm-7">
+            <div class="credit">
+            <div>2025 Team3-JSC-FPTU</div>
+            <div>
                 <a href="" style="padding: 0 10px 0 0;">Terms of Service</a>
                 <a href="" style="padding: 0 10px 0 0;">Privacy Policy</a>
                 <a href="" style="padding: 0 10px 0 0;">Cookies</a>

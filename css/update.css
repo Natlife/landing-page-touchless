@@ -2,25 +2,35 @@
 /*---------------------------------- update ----------------------------------*/
 #updates{
     margin-top: 40px;
+    margin-bottom: -80px;
     padding: 50px;
     padding-bottom: 100px;
-    border-radius: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
+.des-cnt{
+    width: 30%;
+}
+
 div img {
     width: 100%;
-    border-radius: 10px;
     padding: 0;
     margin: 0;
 }
 
+#updates .des {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 div .carousel-inner {
-    width: 800px;
-    box-shadow: 0 0 0 2px rgb(0, 0, 0), 8px 8px 0 0 rgb(0, 0, 0);
+    width: 50vw;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 #myCarousel{

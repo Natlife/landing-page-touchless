@@ -1,11 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@charset "UTF-8";@font-face {
+  font-family: 'TeXGyreAdventor';
+  font-style: normal;
+  font-weight: normal;
+  src: url(./gothic/texgyreadventor-regular.otf)
+}
+
+@font-face {
+  font-family: 'TeXGyreAdventor';
+  font-style: normal;
+  font-weight: bold;
+  src: url(./gothic/texgyreadventor-bold.otf)
+}
+
+@font-face {
+  font-family: 'TeXGyreAdventor';
+  font-style: italic;
+  font-weight: normal;
+  src: url(./gothic/texgyreadventor-italic.otf)
+}
+
+@font-face {
+  font-family: 'TeXGyreAdventor';
+  font-style: italic;
+  font-weight: bold;
+  src: url(./gothic/texgyreadventor-bolditalic.otf)
+}
+
 :root{
-  --color-1: #ffffff;
+  --nav-color:#F5E6CF;
   --text-color: #000000;
   --accent-color: #0000004d;
-  --btn-text-color: #ffffff;
-  --btn-color: #001f4c;
-  --bg-color: #313131;
+  --btn-text-color: #fff;
+  --card-color: rgb(255, 56, 86);
+  --btn-color: rgb(255, 56, 86) !important;
+  --bg-color: #F9F5EC !important;
 }
 
 @keyframes scaleUp {
@@ -40,26 +68,31 @@ a:focus{
 }
 
 .ssbg{
-    height: auto;
-    --color: #E1E1E1;
-    background-color: #F3F3F3;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-    background-size: 55px 55px;
-    width: 90vw;
-    margin: 20px auto 20px auto;
-
-    /* element chinh scroll effect chong chi dinh dong vao */
-    /* scroll-margin-top: 90px; */
-    /* ------------------------------- */
+  border: #000 2px solid;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px 2px rgba(0,0,0,1);
+  -webkit-box-shadow: 2px 2px 0px 2px rgba(0,0,0,1);
+  -moz-box-shadow: 2px 2px 0px 2px rgba(0,0,0,1);
+  height: 100%;
+  --color: #E1E1E1;
+  /* background: url(/img/bg1.png) no-repeat center center/cover; */
+  
+  width: 90vw;
+  margin: 20px auto 20px auto;
+  background-image: radial-gradient(#000000 0.7px, transparent 0.7px);
+  background-size: 20px 20px;
+  background-color: #f9f5ec;
+  /* element chinh scroll effect chong chi dinh dong vao */
+  /* scroll-margin-top: 90px; */
+  /* ------------------------------- */
 }
 
 .ss-heading{
   margin: 0 auto 40px auto;
   padding-bottom: 25px;
   width: 80%;
-  font-size: 50px;
-  border-bottom: #31313169 2px solid;
+  font-size: 2.5rem;
+  border-bottom: #000 2px solid;
   text-align: center;
 }
 
@@ -71,7 +104,6 @@ a:focus{
 }
 
 
-
 *{
   margin: 0;
   padding: 0;
@@ -79,23 +111,25 @@ a:focus{
 
 html{
   font-size: 12pt;
-  font-family: Poppins, Segoe UI, Tahoma, sans-serif;
+  scroll-behavior: smooth;
   background-color: var(--bg-color);
-  background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
-  background-size: 30px 30px;
-  background-position: -5px -5px;
   overflow-x: hidden;
 }
 
-canvas{position:absolute;top:0;left:0}
-
 body{
+  font-family: 'Century Gothic','TeXGyreAdventor',"STHeiti",sans-serif;
   background-color: transparent;
+}
+
+
+@media (max-width: 768px)
+{
+  .ssbg{
+    height: auto;
+  }  
 }
 
 @media (max-width: 425px)
 {
-  .ss-heading span{
-    font-size: 30px;
-  }
+
 }
