@@ -16,34 +16,79 @@ const supabase = createClient("https://rfzggdqjhflhxndavpkw.supabase.co", "eyJhb
     fetchComments(); 
 });
 
+const COMMENTS_PER_PAGE = 5; 
+let currentPage = 1; 
+let allComments = []; 
+
 async function fetchComments() {
-    const { data, error } = await supabase.from("test").select("*").order("id", { ascending: false });
+    const { data, error } = await supabase.from("test").select("*").order("created_at", { ascending: false });
 
     if (error) {
         console.error("Lỗi:", error);
         return;
     }
 
+    allComments = data;
+    renderComments();
+}
+
+function renderStars(rating) {
+    let stars = "";
+    for (let i = 1; i <= 5; i++) {
+        stars += i <= rating ? "⭐" : "☆"; 
+    }
+    return stars;
+}
+
+function renderComments() {
     const commentList = document.getElementById("comment-list");
     commentList.innerHTML = "";
 
-    data.forEach(comment => {
+    const start = 0;
+    const end = currentPage * COMMENTS_PER_PAGE;
+    const visibleComments = allComments.slice(start, end);
+
+    visibleComments.forEach(comment => {
         const commentItem = document.createElement("div");
         commentItem.classList.add("comment-item");
 
-        const stars = "★".repeat(comment.rating) + "☆".repeat(5 - comment.rating);
+        const date = new Date(comment.created_at);
+        const formattedDate = date.toLocaleString("vi-VN", { 
+            day: "2-digit", month: "2-digit", year: "numeric", 
+            hour: "2-digit", minute: "2-digit" 
+        });
 
         commentItem.innerHTML = `
-            <p><strong>${stars}</strong></p>
+            <p><strong>${renderStars(comment.rating)} (${formattedDate})</strong></p>
             <p>${comment.content}</p>
             <hr>
         `;
         commentList.appendChild(commentItem);
     });
+
+    const loadMoreBtn = document.getElementById("load-more-btn");
+    const collapseBtn = document.getElementById("collapse-btn");
+
+    if (allComments.length > end) {
+        loadMoreBtn.style.display = "block";
+        collapseBtn.style.display = "none";
+    } else {
+        loadMoreBtn.style.display = "none";
+        collapseBtn.style.display = "block";
+    }
 }
 
-fetchComments();
+document.getElementById("load-more-btn").addEventListener("click", () => {
+    currentPage++;
+    renderComments();
+});
 
+document.getElementById("collapse-btn").addEventListener("click", () => {
+    currentPage = 1;
+    renderComments();
+});
+
+fetchComments();
 
 const links = document.querySelectorAll('nav a');
 const downHeadLink = document.getElementById('down-head');
