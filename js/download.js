@@ -16,17 +16,75 @@ $(document).ready(function () {
             $('.table.download-list-table tbody').empty();
             $('.download-list-mobile').empty();
 
-            // Bỏ qua hàng đầu tiên nếu nó là tiêu đề
-            // Duyệt qua từng hàng dữ liệu từ Google Sheet
-            rows.forEach((row, index) => {
-                // Lấy dữ liệu từ các cột
+            // // Bỏ qua hàng đầu tiên nếu nó là tiêu đề
+            // // Duyệt qua từng hàng dữ liệu từ Google Sheet
+            // rows.forEach((row, index) => {
+            //     // Lấy dữ liệu từ các cột
+            //     const version = row.c[0] ? row.c[0].v : '';
+            //     const releaseDate = row.c[1] ? extractDate(String(row.c[1].f)) : '';
+            //     const downloadUrl = row.c[2] ? row.c[2].v : '';
+            //     const notesUrl = row.c[3] ? row.c[3].v : '';
+            //     const status = row.c[4] ? row.c[4].v.toLowerCase() : '';
+
+            //     // Tạo nút tải xuống dựa trên trạng thái
+            //     let downloadButton;
+            //     if (status === 'coming_soon') {
+            //         downloadButton = '<p>Coming soon</p>';
+            //     } else {
+            //         downloadButton = `<a href="${downloadUrl}" class="btn btn-primary btn-sm">Download</a>`;
+            //     }
+
+            //     if (index === 0) {
+            //         $('#download-button').click(function () {
+            //             window.location.href = downloadUrl;
+            //         });
+            //     }
+
+            //     // Tạo liên kết ghi chú phát hành
+            //     let releaseNotes = '';
+            //     if (status !== 'coming_soon' && notesUrl) {
+            //         releaseNotes = `<a href="${notesUrl}">Release Notes</a>`;
+            //     }
+
+            //     // Thêm dữ liệu vào bảng desktop
+            //     const desktopRow = `
+            //         <tr>
+            //             <td class="release-ver">${version}</td>
+            //             <td class="release-date">${releaseDate}</td>
+            //             <td class="release-download">${downloadButton}</td>
+            //             <td class="release-note">${releaseNotes}</td>
+            //         </tr>
+            //     `;
+            //     $('.table.download-list-table tbody').append(desktopRow);
+
+            //     // Thêm dữ liệu vào danh sách mobile
+            //     const mobileItem = `
+            //         <div class="version-item">
+            //             <h4>${version}</h4>
+            //             <div class="version-info">
+            //                 <p><strong>Release Date:</strong> ${releaseDate}</p>
+            //                 <div class="mobile-buttons">
+            //                     ${downloadButton}
+            //                     ${status !== 'coming_soon' && notesUrl ?
+            //             `<a href="${notesUrl}" class="btn btn-default btn-sm">Release Notes</a>` : ''}
+            //                 </div>
+            //             </div>
+            //         </div>
+            //     `;
+            //     $('.download-list-mobile').append(mobileItem);
+            // });
+            // Bỏ rows.forEach(...) cũ, thay bằng:
+            for (let i = rows.length - 1; i >= 0; i--) {
+                const row = rows[i];
+
+                // Lấy dữ liệu
                 const version = row.c[0] ? row.c[0].v : '';
                 const releaseDate = row.c[1] ? extractDate(String(row.c[1].f)) : '';
                 const downloadUrl = row.c[2] ? row.c[2].v : '';
                 const notesUrl = row.c[3] ? row.c[3].v : '';
                 const status = row.c[4] ? row.c[4].v.toLowerCase() : '';
 
-                // Tạo nút tải xuống dựa trên trạng thái
+                // Tạo nút download
                 let downloadButton;
                 if (status === 'coming_soon') {
                     downloadButton = '<p>Coming soon</p>';
@@ -34,13 +92,15 @@ $(document).ready(function () {
                     downloadButton = `<a href="${downloadUrl}" class="btn btn-primary btn-sm">Download</a>`;
                 }
 
-                if (index === 0) {
+                // Nếu bạn vẫn muốn gán nút download cho #download-button khi i = rows.length - 1 (bản mới nhất)
+                // thì bạn cần logic thay thế cho if (index === 0). Ví dụ:
+                if (i === rows.length - 1) {
                     $('#download-button').click(function () {
                         window.location.href = downloadUrl;
                     });
                 }
 
-                // Tạo liên kết ghi chú phát hành
+                // Tạo link release notes
                 let releaseNotes = '';
                 if (status !== 'coming_soon' && notesUrl) {
                     releaseNotes = `<a href="${notesUrl}">Release Notes</a>`;
@@ -48,31 +108,32 @@ $(document).ready(function () {
 
                 // Thêm dữ liệu vào bảng desktop
                 const desktopRow = `
-                    <tr>
-                        <td class="release-ver">${version}</td>
-                        <td class="release-date">${releaseDate}</td>
-                        <td class="release-download">${downloadButton}</td>
-                        <td class="release-note">${releaseNotes}</td>
-                    </tr>
-                `;
+        <tr>
+            <td class="release-ver">${version}</td>
+            <td class="release-date">${releaseDate}</td>
+            <td class="release-download">${downloadButton}</td>
+            <td class="release-note">${releaseNotes}</td>
+        </tr>
+    `;
                 $('.table.download-list-table tbody').append(desktopRow);
 
                 // Thêm dữ liệu vào danh sách mobile
                 const mobileItem = `
-                    <div class="version-item">
-                        <h4>${version}</h4>
-                        <div class="version-info">
-                            <p><strong>Release Date:</strong> ${releaseDate}</p>
-                            <div class="mobile-buttons">
-                                ${downloadButton}
-                                ${status !== 'coming_soon' && notesUrl ?
+        <div class="version-item">
+            <h4>${version}</h4>
+            <div class="version-info">
+                <p><strong>Release Date:</strong> ${releaseDate}</p>
+                <div class="mobile-buttons">
+                    ${downloadButton}
+                    ${status !== 'coming_soon' && notesUrl ?
                         `<a href="${notesUrl}" class="btn btn-default btn-sm">Release Notes</a>` : ''}
-                            </div>
-                        </div>
-                    </div>
-                `;
+                </div>
+            </div>
+        </div>
+    `;
                 $('.download-list-mobile').append(mobileItem);
-            });
+            }
+
         })
         .catch(error => {
             console.error('Error fetching data from Google Sheet:', error);
