@@ -73,7 +73,6 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-    /* margin: 50px auto 0 auto; */
   padding: auto 15px 15px auto;
   width: 250px;
   height: 40px;
@@ -130,5 +129,51 @@
 .icon {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .form > p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .oauthButton, .form > input {
+    width: 90%; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    width: 95%; 
+    padding: 10px;
+  }
+
+  .form > p {
+    font-size: 16px;
+  }
+
+  .oauthButton {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .form > input {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .separator > div {
+    width: 80px; 
+  }
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
