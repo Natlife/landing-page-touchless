@@ -1,5 +1,5 @@
 :root{
-  --star-color: #000;
+  --star-color: #fff;
 }
 .full-wh {
   position: absolute;
@@ -10,6 +10,7 @@
 }
 
 .bg-animation {
+  background-color: #000;
   position: fixed;
   top: 0;
   left: 0;

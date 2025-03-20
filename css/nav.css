@@ -73,7 +73,7 @@ nav svg{
 
 nav .dl-btn {
     border-radius: 10px;
-    height: 80% !important;
+    height: 80%;
     display: flex;
     background-color: var(--btn-color);
     margin-right:0 ;
@@ -121,7 +121,7 @@ nav a:hover{
         transition: 0.75s ease-out;
     }
     .dl-btn{
-        height: 150px;
+        height: 100px !important;
         border-radius: 0 !important;
         border: none !important;
     }
