@@ -17,7 +17,7 @@
   --font-color-sub: #666;
   --bg-color: #fff;
   --main-color: #323232;
-  padding: 20px;
+  padding: 24px;
   background: var(--background);
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
   border-radius: 5px;
   border: 2px solid var(--main-color);
   box-shadow: 4px 4px var(--main-color);
-
+  margin: 48px;
 }
 
 .form > p {
@@ -45,27 +45,6 @@
   color: var(--font-color-sub);
   font-weight: 600;
   font-size: 17px;
-}
-
-.separator {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.separator > div {
-  width: 100px;
-  height: 3px;
-  border-radius: 5px;
-  background-color: var(--font-color-sub);
-}
-
-.separator > span {
-  color: var(--font-color);
-  font-family: var(--font-SpaceMono);
-  font-weight: 600;
 }
 
 .oauthButton {
@@ -177,3 +156,23 @@
   height: 1.2rem;
 }
 
+nav .dl-btn {
+    border-radius: 10px;
+    height: 80%;
+    padding: 24px;
+    display: flex;
+    background-color: var(--btn-color);
+    margin-right:0 ;
+    border: #000 1px solid;
+    text-align: right;
+    text-decoration: none;
+    color: var(--btn-text-color);
+    font-size: 20px; 
+    margin-left: 24px;
+}
+
+nav .dl-btn:hover{
+    color: var(--btn-text-color);
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}

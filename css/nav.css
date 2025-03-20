@@ -41,7 +41,7 @@ nav{
     transition: 0.3s;
 }
 
-.tologin, nav a:first-child:hover{
+nav a:first-child:hover{
     box-shadow: none;
 }
 
@@ -149,5 +149,5 @@ nav a:hover{
     }
 }
  .tologin {
-    background-color: #F5E6CF;
+    background-color: #f5e6cf;
  }
