@@ -87,9 +87,9 @@ a:focus{
   
   width: 90vw;
   margin: 20px auto 20px auto;
-  background-image: radial-gradient(#000000 0.7px, transparent 0.7px);
+  /* background-image: radial-gradient(#000000 0.05rem, transparent 0.05rem); */
   background-size: 20px 20px;
-  background-color: #f9f5ec;
+  background-color: var(--nav-color);
   /* element chinh scroll effect chong chi dinh dong vao */
   /* scroll-margin-top: 90px; */
   /* ------------------------------- */
