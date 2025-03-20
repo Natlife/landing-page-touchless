@@ -1,5 +1,17 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  transform: translateZ(0);
+  overflow: hidden;
+}
+
 .form {
-  --background: #d3d3d3;
+  --background:  rgba(255, 56, 86, 0.85);
   --input-focus: #2d8cf0;
   --font-color: #323232;
   --font-color-sub: #666;
@@ -15,6 +27,7 @@
   border-radius: 5px;
   border: 2px solid var(--main-color);
   box-shadow: 4px 4px var(--main-color);
+
 }
 
 .form > p {
@@ -118,3 +131,4 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+
