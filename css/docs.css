@@ -29,12 +29,14 @@
 }
 
 .docs-left{
-    height: 500px;
+    height: 700px;
     overflow-y: auto;
 }
 
 .docs-right{
+    height: 700px;
     padding: 0 20px;
+    overflow-y: auto;
     border-radius: 20px;
 }
 
@@ -68,9 +70,8 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    #docs {
+    /* #docs {
         /* padding: 20px; */
-    }
 
     #docs .docsHead {
         width: 100%;
@@ -89,7 +90,7 @@
     }
 
     .docs-left {
-        height: 500px; 
+        height: 200px; 
         overflow-y: auto; 
         overflow-x: hidden;
     }
