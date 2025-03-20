@@ -17,17 +17,18 @@
   --font-color-sub: #666;
   --bg-color: #fff;
   --main-color: #323232;
-  padding: 24px;
   background: var(--background);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 20px;
   border-radius: 5px;
   border: 2px solid var(--main-color);
   box-shadow: 4px 4px var(--main-color);
-  margin: 48px;
+  width: 2000px; 
+  padding: 300px; 
+  font-size: 60em; 
+  gap: 100px;
 }
 
 .form > p {
@@ -47,19 +48,21 @@
   font-size: 17px;
 }
 
+.form-container {
+  transform: scale(1o); 
+  transform-origin: center;
+}
+
 .oauthButton {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
   padding: auto 15px 15px auto;
-  width: 250px;
-  height: 40px;
   border-radius: 5px;
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
   box-shadow: 4px 4px var(--main-color);
-  font-size: 16px;
   font-weight: 600;
   color: var(--font-color);
   cursor: pointer;
@@ -67,6 +70,9 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  width: 1500px;
+  height: 2500px;
+  font-size: 100px;
 }
 
 .oauthButton::before {
@@ -92,22 +98,20 @@
 }
 
 .form > input {
-  width: 250px;
-  height: 40px;
   border-radius: 5px;
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
   box-shadow: 4px 4px var(--main-color);
-  font-size: 15px;
   font-weight: 600;
   color: var(--font-color);
   padding: 5px 10px;
   outline: none;
 }
 
-.icon {
-  width: 1.5rem;
-  height: 1.5rem;
+.form > input, .oauthButton {
+  width: 300px; /* Tăng chiều rộng các ô input */
+  height: 50px; /* Tăng chiều cao */
+  font-size: 18px; /* Tăng kích thước chữ */
 }
 
 @media screen and (max-width: 768px) {
@@ -151,20 +155,16 @@
   }
 }
 
-.icon {
-  width: 1.2rem;
-  height: 1.2rem;
-}
 
 nav .dl-btn {
     border-radius: 10px;
     height: 80%;
     padding: 24px;
     display: flex;
-    background-color: var(--btn-color);
+    background-color: rgba(255, 56, 86, 0.85);
     margin-right:0 ;
     border: #000 1px solid;
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     color: var(--btn-text-color);
     font-size: 20px; 
