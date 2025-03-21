@@ -12,6 +12,7 @@
 
 .des-cnt{
     width: 30%;
+    color: var(--text-color);
 }
 
 div img {
