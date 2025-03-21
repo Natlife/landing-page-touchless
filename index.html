@@ -60,7 +60,7 @@
             <a href="#docs">Docs</a>
             <a href="#download">Download</a>
             <a href="#team">About</a>
-            <a class="tologin" onclick="window.open('login.html', '_blank')">Log in</a>
+            <a id="authButton" class="tologin" onclick="window.open('login.html', '_blank')">Log in</a>
             
             <!-- change theme -->
             <label class="theme-switch">
@@ -113,8 +113,8 @@
                 <div class="des-img">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="item active"> <img src="img/1.jpg"></div>
-                            <div class="item"> <img src="img/2.jpg"> </div>
+                            <div class="item active"> <img src="img/app.jpg"></div>
+                            <div class="item"> <img src="img/app2.jpg"> </div>
                             <div class="item"> <img src="img/3.jpg"></div>
                         </div>
                     </div>
@@ -653,11 +653,9 @@
                 <div class="comment-section">
                     <form>
                         <input id="comment-input" type="text" placeholder="Enter your feedback here">
-                        <button id="submit-comment">Submit</button>
+                        <button id="submit-comment" type="button">Submit</button>
+                        <div id="comment-list"></div>
                     </form>
-                    <div id="comment-list"></div>
-                    <button id="load-more-btn" style="display: none;">Xem thêm</button>
-                    <button id="collapse-btn" style="display: none;">Thu gọn</button>
                 </div>
             </div>
         </div>
@@ -697,6 +695,8 @@
 
     <!-- scripts -->
     <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/comments.js"></script>
+    <script type="module" src="./js/user.js"></script>
 </body>
 
 
