@@ -45,7 +45,7 @@ nav{
     background-color: transparent !important;
 }
 
-.tologin, nav a:first-child:hover{
+nav a:first-child:hover{
     box-shadow: none;
     cursor: pointer;
 }
@@ -358,5 +358,5 @@ nav a:hover{
     }
 }
  .tologin {
-    background-color: #F5E6CF;
+    background-color: #f5e6cf;
  }
