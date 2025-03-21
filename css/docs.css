@@ -108,7 +108,58 @@
     }
 
     .title {
-        font-size: 150%;
+        text-align: center;
+        font-size: 140%;
+        padding: 6px;
+        margin: 3px 0;
+        border-radius: 16px;
     }
 }
 
+@media screen and (max-width: 480px) {
+    #docs .docsHead {
+        width: 100%;
+        font-size: 20px;       
+        height: auto;
+        padding: 8px;
+        margin-bottom: 15px;
+        /* Xuống dòng nếu text quá dài */
+        white-space: normal; 
+        overflow-wrap: break-word; 
+        word-wrap: break-word;
+    }
+
+    .docs-body {
+        flex-direction: column;
+    }
+
+    .docs-left,
+    .docs-right {
+        width: 100%;
+    }
+
+    .docs-left {
+        height: 150px;          
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .docs-right {
+        margin-top: 20px;
+        padding: 0;
+        height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 120%;
+        padding: 4px;
+        margin: 2px 0;
+        border-radius: 12px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
