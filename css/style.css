@@ -26,21 +26,10 @@
   src: url(./gothic/texgyreadventor-bolditalic.otf)
 }
 
-:root{
-  --nav-color:#F5E6CF;
-  --text-color: #000000;
-  --accent-color: #0000004d;
-  --btn-text-color: #fff;
-  --card-color: rgb(255, 56, 86);
-  --btn-color: rgb(255, 56, 86) !important;
-  --bg-color: #F9F5EC !important;
-}
-
-
 @supports not selector(::-webkit-scrollbar) {
   body {
     scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    var(--sb-track-color);
   }
 }
 
@@ -48,26 +37,37 @@
   0% {
     transform: scale(1);
   }
-
+  
   50% {
     transform: scale(0.95);
   }
-
+  
   100% {
     transform: scale(1);
   }
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
+  0% {
+    background-position: 0% 50%;
 	}
 	50% {
-		background-position: 100% 50%;
+    background-position: 100% 50%;
 	}
 	100% {
-		background-position: 0% 50%;
+    background-position: 0% 50%;
 	}
+}
+
+:root{
+  --nav-color:#FFEAD2;
+  --text-color: #000000;
+  --btn-text-color: #fff;
+  --card-color: #DBDFEA;
+  --btn-color: rgb(255, 56, 86) !important;
+  --bg-color: #ACB1D6 !important;
+  --ss-bg-color: #FFEAD2;
+  --docs-bg-color: #DBDFEA;
 }
 
 a:focus{
@@ -82,27 +82,43 @@ a:focus{
   -webkit-box-shadow: 2px 2px 0px 2px rgba(0,0,0,1);
   -moz-box-shadow: 2px 2px 0px 2px rgba(0,0,0,1);
   height: 100%;
-  --color: #E1E1E1;
   /* background: url(/img/bg1.png) no-repeat center center/cover; */
   
   width: 90vw;
   margin: 20px auto 20px auto;
   /* background-image: radial-gradient(#000000 0.05rem, transparent 0.05rem); */
   background-size: 20px 20px;
-  background-color: var(--nav-color);
+  background-color: var(--ss-bg-color);
   /* element chinh scroll effect chong chi dinh dong vao */
   /* scroll-margin-top: 90px; */
   /* ------------------------------- */
+  transition: 0.3s ease;
 }
 
+html{
+  font-size: 12pt;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body{
+  background-color: var(--bg-color);
+  font-family: 'Century Gothic','TeXGyreAdventor',"STHeiti",sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
 
 .ss-heading{
   margin: 0 auto 40px auto;
   padding-bottom: 25px;
   width: 80%;
   font-size: 2.5rem;
-  border-bottom: #000 2px solid;
+  border-bottom: var(--text-color) 2px solid;
   text-align: center;
+  color: var(--text-color);
 }
 
 .gradient-bg{
@@ -112,33 +128,13 @@ a:focus{
 	height: 100%;
 }
 
-
-*{
-  margin: 0;
-  padding: 0;
+.theme-switch__checkbox:checked {
+  background-color: #000;
 }
-
-html{
-  font-size: 12pt;
-  scroll-behavior: smooth;
-  background-color: var(--bg-color);
-  overflow-x: hidden;
-}
-
-body{
-  font-family: 'Century Gothic','TeXGyreAdventor',"STHeiti",sans-serif;
-  background-color: transparent;
-}
-
 
 @media (max-width: 768px)
 {
   .ssbg{
     height: auto;
   }  
-}
-
-@media (max-width: 425px)
-{
-
 }

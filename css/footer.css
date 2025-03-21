@@ -21,6 +21,7 @@ footer {
 }
 
 .feedback {
+  color: var(--text-color);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -70,6 +71,7 @@ footer {
 }
 
 .contacts .icons {
+  color: var(--text-color);
   font-size: 1rem;
   margin: 0 10px 0 10px;
 }
@@ -88,16 +90,16 @@ footer {
   width: 90vw;
   padding: 20px 0px 20px 0px;
   font-size: 10px;
-  color: black;
+  color: var(--text-color);
 }
 
 .credit a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
 }
 
 .credit a:hover {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -123,7 +125,7 @@ footer {
 }
 
 .rating:not(:checked) > label > svg {
-  fill: #666;
+  fill: var(--text-color);
   transition: fill 0.3s ease;
 }
 

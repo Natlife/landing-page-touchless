@@ -11,7 +11,7 @@
 }
 
 .docs-body{
-    background-color: #fdfdfd;
+    background-color: var(--docs-bg-color);
     box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
     -webkit-box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
     -moz-box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
@@ -54,16 +54,20 @@
     transition: background-color 0.5s ease-in-out;
 }
 .title.disabled{
-    background-color: grey !important ;
+    color: var(--btn-text-color);
+    background-color: rgba(128, 128, 128, 0.37) !important ;
     pointer-events: none;
 }
 
+.content a,p,h1,h2,h3,h4,h5,h6{
+    color: var(--text-color) !important;
+}
 
 .content {
     display: none; 
     padding: 20px;
     /* background-color: aliceblue; */
-    border: 1px,solid,#31363F;
+    /* border: 1px,solid,#31363F; */
     border-radius: 20px;
     width: 100%;
 }

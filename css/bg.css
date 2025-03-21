@@ -1,6 +1,20 @@
 :root{
   --star-color: #fff;
+  --nav-color: #34374C !important;
+  --text-color: #fff !important;
+  --ss-bg-color: #34374c84 !important;
+  --card-color: transparent!important;
+  --docs-bg-color: #2e2b2b54 !important;
 }
+
+
+
+.fts-card{
+  background: linear-gradient(-45deg, #09085d79, #0f0c8c79, #1410bb79 , #7712f779, #23d5ab79);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
 .full-wh {
   position: absolute;
   top: 0px;

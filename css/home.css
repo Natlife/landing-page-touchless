@@ -9,6 +9,7 @@
 }
 
 #home h2{
+    /* font-weight: 500; */
     color: var(--text-color);
     font-size: 3rem;
 }
@@ -60,6 +61,7 @@
   
 #home p{
     padding-bottom: min(5%, 20px);
+    color: var(--text-color);
 }
 
 
