@@ -131,15 +131,12 @@
     }
 }
 
-nav .dl-btn {
-    border-radius: 10px;
-    padding: 12px 24px;
-    background-color: rgba(255, 56, 86, 0.85);
-    border: 2px solid #000;
+nav .tohome {
+    border-radius: 0;
+    padding: 5px;
     font-size: 18px;
     text-align: center;
     text-decoration: none;
-    color: white;
 
     display: flex;
     align-items: center;
@@ -150,7 +147,8 @@ nav .dl-btn {
     margin-left: 12px;
 }
 
-nav .dl-btn:hover {
-    background-color: #ff1744;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+nav a:hover{
+    text-decoration: none;
+    color: var(--text-color);
 }
