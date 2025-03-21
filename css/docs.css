@@ -41,7 +41,8 @@
 }
 
 .title {
-    color: black;
+    background-color: transparent !important;
+    color: var(--text-color);
     padding: 10px;
     cursor: pointer;
     margin: 5px 0;
@@ -59,7 +60,7 @@
     pointer-events: none;
 }
 
-.content a,p,h1,h2,h3,h4,h5,h6{
+.content a,p,h1,h2,h3,h4,h5,h6,span,li{
     color: var(--text-color) !important;
 }
 

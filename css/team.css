@@ -34,7 +34,7 @@
 #team .card-title {
     text-align: center;
     color: var(--text-color);
-    font-size: 20px;
+    font-size: var(--member-name-text-size);
     font-weight: 400;
   }
   
@@ -44,6 +44,7 @@
   }
   
 #team .card-socials {
+
     display: flex;
     height: 0;
     opacity: 0;
@@ -61,7 +62,7 @@
 }
   
 #team .card-socials-btn svg {
-    width: 100%;
+    width: 150%;
     height: 100%;
     fill: var(--text-color);
 }
@@ -83,6 +84,7 @@
 
 .parent {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(30, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
@@ -101,7 +103,25 @@
 .div10 { display: flex; justify-content: center; grid-area: 2 / 21 / 3 / 26; }
 .div11 { display: flex; justify-content: center; grid-area: 2 / 26 / 3 / 31; }
 
-@media (max-width: 768px){
+@media (max-width: 1400px){
+    .parent {
+        grid-template-rows: repeat(5, 1fr);
+        }
+        
+        .div1 { grid-area: 1 / 14 / 2 / 18; }
+        .div2 { grid-area: 2 / 9 / 3 / 13; }
+        .div3 { grid-area: 2 / 19 / 3 / 23; }
+        .div4 { grid-area: 3 / 9 / 4 / 13; }
+        .div5 { grid-area: 3 / 19 / 4 / 23; }
+        .div6 { grid-area: 4 / 4 / 5 / 8; }
+        .div7 { grid-area: 4 / 14 / 5 / 18; }
+        .div8 { grid-area: 4 / 24 / 5 / 28; }
+        .div9 { grid-area: 5 / 4 / 6 / 8; }
+        .div10 { grid-area: 5 / 14 / 6 / 18; }
+        .div11 { grid-area: 5 / 24 / 6 / 28; }
+}
+
+@media (max-width: 800px){
     .parent {
         display: flex;
         align-items: center;
@@ -119,8 +139,4 @@
     .div9 { grid-area: 9 / 1 / 10 / 2; }
     .div10 { grid-area: 10 / 1 / 11 / 2; }
     .div11 { grid-area: 11 / 1 / 12 / 2; }
-}
-
-@media (max-width: 425px){
-
 }

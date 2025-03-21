@@ -8,32 +8,34 @@
     flex-direction: column;
 }
 
-#download h1{
-    font-size: 40px;
-}
-
-#download #lastest-verDownload {
-    margin-top: 0;
-    padding: 1.25em;
-    text-align: center;
-}
-
 #download .row {
     padding: 0;
     height: 100%;
+}
+
+#download th,td {
+    color: var(--text-color);
+}
+
+#download a{
+    color: var(--text-color);
 }
 
 /*
 Button RGB Color Stuffs
 */
 
-.rainbow-button {
+.rainbow-button { 
+    margin-top: 20px;
     padding: 15px 40px;
     border: none;
     outline: none;
     color: black;
     cursor: pointer;
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 0;
     border-radius: 12px;
   }
@@ -97,7 +99,7 @@ Rainbow button over
 
 #list-version {
     padding: 1.25em;
-    border-top: 2px solid black;
+    /* border-top: 2px solid black; */
 }
 
 .download-list-table tbody tr:nth-child(odd),
