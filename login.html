@@ -16,16 +16,16 @@
         <img class="navbar-brand" id="logo" src="img/logo.jpg">
         <span class="navbar-brand"> touchless </span>
     </a>
-    <button class="dl-btn" onclick="window.open('index.html', '_blank')">Home</button>
+    <button class="dl-btn" onclick="window.open('index.html', '_self')">Home</button>
 </nav>
 
-<div class="login">
+<div class="login" id="login-container">
     <form action="" class="form">
         <p>Welcome,
             <span>sign in to continue</span>
         </p>
-        <input type="email" placeholder="Enter your email" name="email">
-        <button class="oauthButton">
+        <input id="email" type="email" placeholder="Enter your email" name="email">
+        <button class="oauthButton" id="login-button" type="button">
             Continue
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -33,7 +33,9 @@
                 <path d="m13 17 5-5-5-5"></path>
             </svg>
         </button>
+        <div id="message"></div>
     </form>
 </div>
+<script type="module" src="./js/auth.js"></script>
 </body>
 </html>

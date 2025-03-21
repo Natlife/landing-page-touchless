@@ -54,7 +54,7 @@
             <a href="#updates">Updates</a>
             <a href="#docs">Docs</a>
             <a href="#team">About</a>
-            <button class="tologin" onclick="window.open('login.html', '_blank')">Log in</button>
+            <button id="authButton" class="tologin"></button>
             <a href="#download " class="dl-btn">Download</a>
         </div>
 
@@ -614,11 +614,8 @@
                 <div class="comment-section">
                     <form>
                         <input id="comment-input" type="text" placeholder="Enter your feedback here">
-                        <button id="submit-comment">Submit</button>
+                        <button id="submit-comment" type="button">Submit</button>
                     </form>
-                    <div id="comment-list"></div>
-                    <button id="load-more-btn" style="display: none;">Xem thêm</button>
-                    <button id="collapse-btn" style="display: none;">Thu gọn</button>
                 </div>
             </div>
         </div>
@@ -658,6 +655,7 @@
 
     <!-- scripts -->
     <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
