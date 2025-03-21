@@ -1,11 +1,11 @@
-import { supabase } from "./supabaseClient";
+import { supabase } from "./supabaseClient.js";
 
-const submit = document.getElementById("submit-comment");
-const comment = document.getElementById("comment-input").value;
-const rating = document.querySelector('input[name="rate"]:checked')?.value;
 let  allComments = [];
 
-submit.addEventListener("click", async () =>  {
+// get submit button
+document.getElementById("submit-comment").addEventListener("click", async () =>  {
+    const comment = document.getElementById("comment-input").value;
+    const rating = document.querySelector('input[name="rate"]:checked')?.value;
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
 
     if (sessionError || !session || !session.user) {
@@ -21,10 +21,11 @@ submit.addEventListener("click", async () =>  {
         .insert([{user_id, rating, comment }])
     if(error) return alert("Lỗi khi gửi bình luận!");
 
-    comment.value = "";
+    document.getElementById("comment-input").value = "";
 });
 
-export async function fetchComments() {
+// update comments
+async function fetchComments() {
     const { data, error } = await supabase 
         .from("reviews")
         .select("*, users(username), likes(count)")
@@ -40,8 +41,16 @@ export async function fetchComments() {
         username: review.users?.username || "anonymous",
         like_count: review.likes?.[0]?.count || 0
     }));
-
+    console.log("allComments sau khi map: ", allComments);
     renderComments();
+}
+
+function renderStars(rating) {
+    let stars = "";
+    for (let i = 1; i <= 5; i++) {
+        stars += i <= rating ? "⭐" : "☆"; 
+    }
+    return stars;
 }
 
 function renderComments() {
@@ -82,5 +91,25 @@ function renderComments() {
     })
 }
 
+// real-time
+supabase
+    .channel("reviews-realtime")
+    .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "reviews" },
+        async (payload) => {
+            await fetchComments();
+        }
+    )
+    .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "likes" },
+        async (payload) => {
+            await fetchComments();
+        }
+    )
+    .subscribe();
+
+fetchComments();
 
 
