@@ -16,10 +16,10 @@
         <img class="navbar-brand" id="logo" src="img/logo.jpg">
         <span class="navbar-brand"> touchless </span>
     </a>
-    <button class="dl-btn" onclick="window.open('index.html', '_self')">Home</button>
+    <a class="tohome" onclick="window.open('index.html', '_blank')">Home</a>
 </nav>
 
-<div class="login" id="login-container">
+<div class="login">
     <form action="" class="form">
         <p>Welcome,
             <span>sign in to continue</span>
@@ -33,7 +33,7 @@
                 <path d="m13 17 5-5-5-5"></path>
             </svg>
         </button>
-        <div id="message"></div>
+        <p id="message"></p>
     </form>
 </div>
 <script type="module" src="./js/auth.js"></script>
