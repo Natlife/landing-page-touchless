@@ -22,42 +22,42 @@ nav{
 }
 
 .links-container{
+    margin-right: 30px;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    justify-content: flex-end;
 }
 
-.tologin, nav a{
-    height: 80%;
+nav a{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 100%;
     padding: 0 20px;
     font-size: 20px;
-    display: flex;
     align-items: center;
     text-decoration: none;
     color: var(--text-color);
     transition: 0.3s;
 }
 
-.tologin {
-    background-color: transparent !important;
-}
-
-nav a:first-child:hover{
+nav a:first-child:hover, a:first-child:focus{
     box-shadow: none;
     cursor: pointer;
 }
 
 nav a:hover{  
-    box-shadow: rgba(0, 0, 0, 0.493) 2.4px 2.4px 3.2px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 nav .home-link{
-    padding-right: 0;
-    margin-right: 0;
-
+    margin-left: 0;
+    width: 100%;
+    
 }
 
 nav svg{
@@ -76,26 +76,6 @@ nav svg{
     cursor: pointer;
 }
 
-nav .dl-btn {
-    border-radius: 10px;
-    height: 80%;
-    display: flex;
-    background-color: var(--btn-color);
-    margin-right:0 ;
-    border: #000 1px solid;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    color: var(--btn-text-color);
-    font-size: 20px;
-}
-
-nav .dl-btn:hover{
-    cursor: pointer;
-    color: var(--btn-text-color);
-    text-decoration: none;
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-  }
 
 nav a:hover{
     text-decoration: none;
@@ -104,6 +84,7 @@ nav a:hover{
 
 /* theme */
 .theme-switch {
+    margin-left: 20px !important;
     --toggle-size: 1.25rem;
     /* the size is adjusted using font-size,
         this is not transform scale,
@@ -313,8 +294,14 @@ nav a:hover{
     
 }
 
-@media(max-width: 768px){
+@media(max-width: 1350px){
+    .theme-switch{
+        position: relative;
+        bottom: 410px;
+        left: 160px;
+    }
     .links-container{
+        margin-right: 0;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -328,11 +315,6 @@ nav a:hover{
         background-color: var(--nav-color);
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.75s ease-out;
-    }
-    .dl-btn{
-        height: 100px !important;
-        border-radius: 0 !important;
-        border: none !important;
     }
     nav a{
         box-sizing: border-box;
@@ -356,7 +338,5 @@ nav a:hover{
         left: 0;
         z-index: 9;
     }
+
 }
- .tologin {
-    background-color: #f5e6cf;
- }

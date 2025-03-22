@@ -21,6 +21,10 @@
     color: var(--text-color);
 }
 
+.btn-primary {
+    color: #fff !important;
+}
+
 /*
 Button RGB Color Stuffs
 */
@@ -122,29 +126,34 @@ Desktop responsive
 }
 
 /* Custom Scrollbar cho modern browsers */
-
-#download .table-container::-webkit-scrollbar {
+.table-container::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
-#download .table-container::-webkit-scrollbar-track {
+.table-container::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 4px;
 }
 
-#download .table-container::-webkit-scrollbar-thumb {
+.table-container::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 4px;
 }
 
-#download .table-container::-webkit-scrollbar-thumb:hover {
+.table-container::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
 /*
 Mobile responsive
 */
+
+.btn-default, .btn-default:hover{
+    background-color: transparent;
+}
+
+
 
 #download .download-list-mobile .version-item {
     padding: 15px;

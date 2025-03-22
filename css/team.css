@@ -61,10 +61,9 @@
     cursor: pointer;
 }
   
-#team .card-socials-btn svg {
-    width: 150%;
-    height: 100%;
-    fill: var(--text-color);
+#team .card-socials-btn {
+    font-size: 20px;
+    color: var(--text-color);
 }
   
 #team .card:hover > .card-socials {

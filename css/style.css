@@ -90,6 +90,26 @@ body{
   font-family: 'Century Gothic','TeXGyreAdventor',"STHeiti",sans-serif;
 }
 
+/* Custom Scrollbar cho modern browsers */
+.table-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: var(--ss-bg-color) !important;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: var(--vard-color) !important;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: var(--ss-bg-color) !important;
+}
+
 
 a:focus{
   text-decoration: none;
@@ -107,7 +127,7 @@ a:focus{
   margin: 20px auto 20px auto;
   background-size: 20px 20px;
   background-color: var(--ss-bg-color);
-  transition: 0.3s ease;
+  transition: 0.7s ease;
 }
 
 .ss-heading{
@@ -129,6 +149,30 @@ a:focus{
 
 .theme-switch__checkbox:checked {
   background-color: #000;
+}
+
+/* login */
+.login-btn{
+  display: flex;
+  justify-content: end;
+  position: relative;
+  right: 20px;
+  top: 2px;
+}
+
+.login-btn a{
+  background-color: var(--nav-color);
+  padding: 10px 15px 2px 15px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  border: #000 2px solid ;
+  border-bottom: none;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.login-btn a:hover{
+  cursor: pointer;
 }
 
 @media (max-width: 768px)
