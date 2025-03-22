@@ -1,4 +1,5 @@
 import { supabase } from "./supabaseClient.js";
+import { fetchRatings } from "./rating.js";
 
 let  allComments = [];
 
@@ -41,6 +42,7 @@ async function fetchComments() {
         username: review.users?.username || "anonymous",
         like_count: review.likes?.[0]?.count || 0
     }));
+    fetchRatings();
     renderComments();
 }
 
@@ -76,12 +78,12 @@ function renderComments() {
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div style="display: flex; align-items: center;">
                   <button type="button" class="like-btn" data-id="${comment.review_id}" style="background: none; border: none; cursor: pointer;">
-                      ❤️
+                      👍
                   </button>
                   <span class="like-count" data-id="${comment.review_id}">${comment.like_count || 0}</span>
               </div>
               <button type="button" class="delete-btn" data-id="${comment.review_id}" style="background: none; border: none; color: red; cursor: pointer;">
-                  🗑️ Xóa
+                  🗑️
               </button>
            </div>
         <hr>
@@ -201,5 +203,4 @@ supabase
     .subscribe()
 
 fetchComments();
-
 
