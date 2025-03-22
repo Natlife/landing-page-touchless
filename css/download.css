@@ -72,7 +72,7 @@ Button RGB Color Stuffs
     height:  calc(100% + 4px);
     filter: blur(8px);
     animation: glowing 20s linear infinite;
-    transition: opacity .3s ease-in-out;
+    /* transition: opacity .3s ease-in-out; */
     border-radius: 10px;
     opacity: 0;
 }

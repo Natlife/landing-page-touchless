@@ -50,7 +50,7 @@
     opacity: 0;
     margin-top: 20px;
     gap: 20px;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
   
 #team .card-socials-btn {

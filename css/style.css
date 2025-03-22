@@ -127,7 +127,7 @@ a:focus{
   margin: 20px auto 20px auto;
   background-size: 20px 20px;
   background-color: var(--ss-bg-color);
-  transition: 0.7s ease;
+  /* transition: 0.7s ease; */
 }
 
 .ss-heading{

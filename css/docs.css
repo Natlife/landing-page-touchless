@@ -52,7 +52,7 @@
     border-bottom: 2px solid transparent; /* Để tránh màu viền mặc định */
     /* border-image: linear-gradient(90deg, black, white); */
     border-image-slice: 1;
-    transition: background-color 0.5s ease-in-out;
+    /* transition: background-color 0.5s ease-in-out; */
 }
 
 .title.disabled{
