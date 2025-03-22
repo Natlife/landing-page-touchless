@@ -8,11 +8,11 @@ async function signIn() {
     try {
         const email = emailInput.value;
         if(!email) {
-            message.textContent = "Vui lòng nhập email";
+            message.textContent = "Please enter your email!";
             return
         }
 
-        message.textContent = "Đang gửi email...";
+        message.textContent = "Sending email...";
 
         const redirectTo = "http://127.0.0.1:5500/landing-page-touchless/"
 
@@ -27,7 +27,7 @@ async function signIn() {
             throw error;
         }
 
-        message.textContent = "Đã gửi email! Vui lòng kiểm tra hộp thư của bạn.";
+        message.textContent = "Email sent! Please check your inbox.";
     } catch (error) {
         message.textContent = `Lỗi: ${error.message || error}`
         console.error(error);

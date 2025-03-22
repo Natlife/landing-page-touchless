@@ -9,17 +9,17 @@ document.getElementById("submit-comment").addEventListener("click", async () => 
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
 
     if (sessionError || !session || !session.user) {
-        return alert("Bạn cần đăng nhập để bình luận!");
+        return alert("You need to log in to comment!");
     }
 
     const user_id = session.user.id;
 
-    if(!rating) return alert("Vui lòng đánh giá");
+    if(!rating) return alert("Please provide a rating!");
 
     const { error } = await supabase
         .from("reviews")
         .insert([{user_id, rating, comment }])
-    if(error) return alert("Lỗi khi gửi bình luận!");
+    if(error) return alert("Error sending comment!");
 
     document.getElementById("comment-input").value = "";
 });
@@ -102,7 +102,7 @@ document.addEventListener("click", async (event) => {
 
         if (!session || !session.user) {
             button.disabled = false;
-            return alert("Bạn cần đăng nhập để Like!");
+            return alert("You need to log in to like!");
         }
 
         const userId = session.user.id;
@@ -148,7 +148,7 @@ document.addEventListener("click", async (event) => {
 
         if (sessionError || !session || !session.user) {
             button.disabled = false; 
-            return alert("Bạn cần đăng nhập để xóa bình luận!");
+            return alert("You need to log in to delete a comment!");
         }
 
         const { data: review, error: fetchError } = await supabase
@@ -159,17 +159,17 @@ document.addEventListener("click", async (event) => {
 
         if (fetchError || !review) {
             button.disabled = false;
-            return alert("Không tìm thấy bình luận!");
+            return alert("Comment not found.");
         }
 
         if (review.user_id !== session.user.id) {
             button.disabled = false;
-            return alert("Bạn không có quyền xóa bình luận này!");
+            return alert("You don't have permission to delete this comment.");
         }
 
         const { error } = await supabase.from("reviews").delete().eq("review_id", reviewId);
         if(error) {
-            alert("Lỗi khi xóa bình luận!");
+            alert("Error deleting comment!");
             console.error(error);
         }
 
