@@ -48,6 +48,10 @@ hr{
     width: 27vw;
 }
 
+.average-rating, .rating-count, .star-level{
+    color: var(--text-color) !important;
+}
+
 @media (max-width: 768px) {
     #feedback{
         flex-direction: column;
