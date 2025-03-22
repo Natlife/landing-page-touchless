@@ -55,6 +55,8 @@ nav a:hover{
 }
 
 nav .home-link{
+    display: flex;
+    justify-content: left;
     margin-left: 0;
     width: 100%;
     
