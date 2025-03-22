@@ -11,6 +11,7 @@
 }
 
 .des-cnt{
+    padding-right: 30px;
     width: 30%;
     color: var(--text-color);
 }
@@ -28,6 +29,10 @@ div img {
     flex-direction: row;
 }
 
+#updates .des-cnt h3{
+    font-weight: 700;
+}
+
 div .carousel-inner {
     width: 50vw;
     border-radius: 10px;
@@ -41,10 +46,13 @@ div .carousel-inner {
 }
 
 @media (max-width: 768px) {
-    
-}
+    #updates .des {
 
-@media (max-width: 425px){
+        flex-direction: column-reverse;
+    }
+    .des-cnt{
+        width: auto;
+    }    
     #updates .upd-contents{
         margin-top: 0;
         margin-bottom: 40px;
@@ -63,4 +71,9 @@ div .carousel-inner {
         width: 70vw;
         margin-bottom: 40px;
     }
+}
+
+@media (max-width: 425px){
+    
+    
 }
