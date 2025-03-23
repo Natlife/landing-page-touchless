@@ -4,11 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/themes.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link id="darkmode" rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/style.css">
@@ -90,19 +85,6 @@
             </label>
         </div>
     </nav>
-
-    <script>
-        const checkbox = document.getElementById('theme-switch__checkbox');
-        const dark = document.getElementById('darkmode');
-        dark.disabled = true;
-        checkbox.addEventListener('change', function() {
-            if (this.checked) {
-                dark.removeAttribute('disabled');
-            } else {
-                dark.setAttribute('disabled', 'true');
-            }
-        });
-    </script>
 
     <!-- home -->
     <section id="home" class=" ssbg ">
@@ -237,7 +219,6 @@
             </div>
         </div>
     </section>
-    <script src="js/download.js"></script>
 
     <!-- docs -->
     <section id="docs" class="ssbg">
@@ -255,7 +236,6 @@
             <span>Docs for Touchless</span>
         </div>
     </section>
-    <script src="js/docs.js"></script>
 
     <!-- Team Section -->
     <section id="team" class="parent ssbg">
@@ -566,21 +546,8 @@
         </section>
     </section>
     
-    <script type="module" src="./js/rating.js"></script>
-    
-    <div class="login-btn">
-        <a id="authButton" class="tologin" onclick="window.open('login.html', '_blank')">Log in</a>
-    </div>
-
-
     <!-- footer -->
     <footer>
-
-            
-           
-
-            
-    
         <div class="contacts">
             <div>
                 <h2>Contacts us: </h2>
@@ -616,9 +583,29 @@
     </footer>
 
     <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="module" src="./js/rating.js"></script>
+    <script src="js/themes.js"></script>
     <script type="module" src="./js/index.js"></script>
     <script type="module" src="./js/comments.js"></script>
     <script type="module" src="./js/user.js"></script>
+    <script src="js/docs.js"></script>
+    <script src="js/download.js"></script>
+    <script>
+        const checkbox = document.getElementById('theme-switch__checkbox');
+        const dark = document.getElementById('darkmode');
+        dark.disabled = true;
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                dark.removeAttribute('disabled');
+            } else {
+                dark.setAttribute('disabled', 'true');
+            }
+        });
+    </script>
 </body>
 
 
