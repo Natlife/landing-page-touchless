@@ -11,8 +11,8 @@ footer {
   border-top: #000 2px solid;
 }
 
-.feedback, .information {
-  display: flex;
+.information {
+  display: flexs;
   justify-content: center;
   align-items: center;
   width: 90vw;
@@ -24,7 +24,7 @@ footer {
   color: var(--text-color);
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  text-align: left;
   flex-direction: row;
 }
 
