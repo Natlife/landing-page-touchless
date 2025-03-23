@@ -32,7 +32,7 @@ import { supabase } from "./supabaseClient.js";
                  throw error;
              }
              console.log("Đăng xuất thành công.");
-             window.location.href = "http://127.0.0.1:5500/landing-page-touchless/";
+             window.open("index.html", '_self');
          } catch (error) {
              console.error(error);
          }

@@ -20,7 +20,7 @@ document.getElementById("submit-comment").addEventListener("click", async () => 
     const { error } = await supabase
         .from("reviews")
         .insert([{user_id, rating, comment }])
-    if(error) return alert("Error sending comment!");
+    if(error) return alert("You can only comment once!");
 
     document.getElementById("comment-input").value = "";
 });
