@@ -75,8 +75,6 @@
   --content-text-size: clamp(0.5rem, calc(1vw + 1rem), 1rem);
   --brandname-text-size: clamp(1.5rem, calc(7vw + 1rem), 3rem);
   --member-name-text-size: clamp(1rem, calc(4vw + 1rem), 1.2rem);
-
-
 }
 
 html{
