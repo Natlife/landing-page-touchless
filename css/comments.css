@@ -1,4 +1,4 @@
-#feedback {
+#feedback{
     height: 80vh;
     margin: auto;
     width: 90vw;
@@ -33,21 +33,15 @@
     -moz-box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 1);
 }
 
-#comment-input {
-    border: 1px solid #31363f2c;
-    width: 65%;
-    height: 50%;
-    border-radius: 10px;
-}
-.rating-container {
+.rating-container{
     padding: 20px;
 }
 
-hr {
+hr{
     border: 0;
 }
 
-#avg-rates {
+#avg-rates{
     margin: 0;
     display: flex;
     position: relative;
