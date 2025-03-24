@@ -53,9 +53,9 @@ footer {
 }
 
 .follow-us {
-margin-left: auto; 
-text-align: right;
-margin: 0;
+  margin-left: auto; 
+  text-align: right;
+  margin: 0;
 }
 
 .copyright {
@@ -75,14 +75,14 @@ margin: 0;
   display: inline-block;
   margin-right: 10px;
   gap: 15px;
-  display: flex;
+  
   align-items: center;
 }
 
         
 
 .information {
-  display: flexs;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 90vw;
@@ -96,7 +96,7 @@ margin: 0;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  padding: 10px;
+ 
   width: 94%;
   border-radius: 10px;
   border: 2px solid #000;
@@ -216,36 +216,110 @@ margin: 0;
   fill: #ffd95f;
 }
 
-@media (max-width: 768px) {
-  footer {
+
+@media (max-width: 1024px) {
+  .footer-content {
     flex-direction: column;
+    gap: 32px;
   }
 
+  .footer-section {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .follow-us {
+    text-align: center;
+    margin: 0;
+  }
+
+  .social-icon {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
   .feedback {
     flex-direction: column;
+    width: 100%;
+    gap: 12px;
   }
 
-  .feedback input {
-    width: 90vw;
-  }
-
+  .feedback input,
   .feedback button {
     width: 90vw;
   }
 
   .contacts {
     flex-direction: column;
+    align-items: center;
   }
 
-  .contacts h2 {
-    margin: 10px 0 10px 0;
-  }
-
+  .contacts h2,
   .contacts .icons {
-    margin: 10px 10px 0 10px;
+    margin: 10px 0;
   }
 
   .credit {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .footer-section p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 0 12px;
+  }
+
+  .footer-section h3 {
+    font-size: 15px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-section p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .social-icon {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .feedback {
+    width: 100%;
+    padding: 16px;
+    margin: 10px 0;
+  }
+
+  .feedback input,
+  .feedback button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .rating {
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    font-size: 10px;
+    padding: 12px 4px;
   }
 }
