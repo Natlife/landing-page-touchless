@@ -38,3 +38,47 @@
     padding: 0.5rem 1rem;
     white-space: nowrap;
 }
+
+
+@media screen and (max-width: 1024px) {
+  .feedback {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comment-section form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  #feedback {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feedback {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .comment-section form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  #feedback {
+    padding: 10px;
+  }
+
+  .feedback {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}
