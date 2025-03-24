@@ -26,3 +26,15 @@
     box-sizing: border-box;
     overflow-x: hidden;
 }
+
+#comment-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+#submit-comment {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
