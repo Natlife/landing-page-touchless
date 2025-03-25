@@ -4,7 +4,8 @@ import { fetchRatings } from "./rating.js";
 let allComments = [];
 
 // get submit button
-document.getElementById("submit-comment").addEventListener("click", async () =>  {
+document.getElementById("submit-comment").addEventListener("click", async (event) =>  {
+    event.preventDefault();
     const comment = document.getElementById("comment-input").value;
     const rating = document.querySelector('input[name="rate"]:checked')?.value;
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
