@@ -81,128 +81,7 @@ footer {
   justify-content: flex-start;  
   margin: 0;                   
   padding: 0;
-}
 
-        
-
-.information {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
-  padding: 20px 0px 20px 0px;
-  border-bottom: 1px solid #31363f2c;
-}
-
-
-
-.ft-brand {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.feedback input {
-  width: 400px;
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  padding: 10px;
-  font-weight: 14px;
-  font-size: 16px;
-}
-
-.feedback button {
-  border: none;
-  outline: none;
-  padding: 10px 30px;
-  background: var(--btn-color);
-  color: var(--btn-text-color);
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.rating {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row-reverse;
-}
-
-.rating > label {
-  margin-right: 4px;
-}
-
-.rating:not(:checked) > input {
-  display: none;
-}
-
-.rating:not(:checked) > label {
-  float: right;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.rating:not(:checked) > label > svg {
-  fill: var(--text-color);
-  transition: fill 0.3s ease;
-}
-
-.rating > input:checked ~ label > svg {
-  fill: #ffd95f;
-}
-
-.rating:not(:checked) > label:hover ~ label > svg,
-.rating:not(:checked) > label:hover > svg {
-  fill: #ffd95f;
-}
-
-#star1:hover ~ label > svg,
-#star1:hover > svg {
-  fill: #ffd95f !important;
-}
-
-#star2:hover ~ label > svg,
-#star2:hover > svg {
-  fill: #ffd95f !important;
-}
-
-#star3:hover ~ label > svg,
-#star3:hover > svg {
-  fill: #ffd95f !important;
-}
-
-#star4:hover ~ label > svg,
-#star4:hover > svg {
-  fill: #ffd95f !important;
-}
-
-#star5:hover ~ label > svg,
-#star5:hover > svg {
-  fill: #ffd95f !important;
-}
-
-#star1:checked ~ label > svg {
-  fill: #ffd95f;
-}
-
-#star2:checked ~ label > svg {
-  fill: #ffd95f;
-}
-
-#star3:checked ~ label > svg {
-  fill: #ffd95f;
-}
-
-#star4:checked ~ label > svg {
-  fill: #ffd95f;
-}
-
-#star5:checked ~ label > svg {
-  fill: #ffd95f;
 }
 
 
@@ -237,21 +116,6 @@ footer {
   .feedback input,
   .feedback button {
     width: 90vw;
-  }
-
-  .contacts {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contacts h2,
-  .contacts .icons {
-    margin: 10px 0;
-  }
-
-  .credit {
-    flex-direction: column;
-    text-align: center;
   }
 
   .footer-section h3 {
@@ -301,10 +165,6 @@ footer {
   .feedback button {
     width: 100%;
     font-size: 14px;
-  }
-
-  .rating {
-    flex-wrap: wrap;
   }
 
   .copyright {
