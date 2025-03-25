@@ -1,6 +1,15 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
   
 .feedback {
   color: var(--text-color);
@@ -8,16 +17,13 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  max-width: 100%;
-  box-sizing: border-box;
   width: 94%;
   border-radius: 10px;
   border: 2px solid #000;
-  margin: 20px;
+  margin: 20px auto;
   padding: 20px;
   box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 1);
-  -webkit-box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 1);
+  background-color: #fce6cc;
 }
 
 #feedback{
@@ -35,31 +41,30 @@
 
 #fb-slide {
   margin: 0;
-  position: relative;
   width: 60vw;
   display: flex;
   flex-direction: column;
 }
 
-.table-container {    
-  overflow-y: auto;           
+.table-container {
+  overflow-y: auto;
   max-height: 80vh;
-  margin-bottom: 6px;         
-  background-color: var(--background-color, #fce6cc); 
-  box-sizing: border-box;    
-  padding-right: 2px;   
-}     
-
+  margin-bottom: 6px;
+  background-color: #fce6cc;
+  box-sizing: border-box;
+  padding-right: 2px;
+  border-radius: 0 !important;
+}
 .comment-item {
   width: 95%;
   border-radius: 10px;
   border: 2px solid #000;
-  margin: 20px;
+  margin: 20px auto;
   padding: 20px;
   box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 1);
-  -webkit-box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 1);
+  background-color: #fce6cc;
 }
+
 
 hr{
   border: 0;
@@ -101,7 +106,8 @@ hr{
 }
 
 .feedback input {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   flex: 1;
   border: none;
   outline: none;
@@ -232,40 +238,58 @@ hr{
 
 @media screen and (max-width: 768px) {
   #feedback {
+    width: 100%;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    height: auto;
+    overflow-x: hidden;
   }
 
   .feedback {
     width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    font-size: 0.9rem;
     flex-direction: column;
     align-items: stretch;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
-  #feedback{
-    flex-direction: column;
-    height: auto;
-  }
-  
-  .comment-item {
-    width:75vw;
-  }
-
-  #fb-slide {
-    width: 90vw;
+  #fb-slide,
+  #avg-rates {
+    width: 100%;
     margin-bottom: 20px;
   }
 
   .comment-section form {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
+    gap: 10px;
   }
 
   #comment-input,
   #submit-comment {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .comment-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .rating {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
 }
+
 
 
 @media screen and (max-width: 480px) {
@@ -276,6 +300,10 @@ hr{
   .feedback {
     padding: 15px;
     font-size: 0.9rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  
   }
 
   #comment-input {
