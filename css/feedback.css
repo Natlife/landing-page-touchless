@@ -41,10 +41,14 @@
   flex-direction: column;
 }
 
-.table-container{    
-  overflow-y: scroll;
+.table-container {    
+  overflow-y: auto;           
   max-height: 80vh;
-}
+  margin-bottom: 6px;         
+  background-color: var(--background-color, #fce6cc); 
+  box-sizing: border-box;    
+  padding-right: 2px;   
+}     
 
 .comment-item {
   width: 95%;
@@ -83,8 +87,6 @@ hr{
   padding: 0.5rem 1rem;
   white-space: nowrap;
 }
-
-
 
 .information {
   display: flex;
@@ -215,14 +217,6 @@ hr{
   color: var(--text-color) !important;
 }
 
-#fb-slide,
-#comment-list {
-  overflow: hidden;
-}
-
-#feedback {
-  overflow: hidden;
-}
 
 @media screen and (max-width: 1024px) {
   .feedback {
@@ -312,4 +306,3 @@ hr{
     flex-wrap: wrap;
   }
 }
-
