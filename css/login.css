@@ -15,12 +15,12 @@ nav {
 .form {
     --background: rgba(255, 56, 86, 0.85);
     --input-focus: #2d8cf0;
-    --font-color: #323232;
-    --font-color-sub: #666;
+    --font-color: #ffffff;
+    --font-color-sub: #f9de85;
     --bg-color: #fff;
-    --main-color: #323232;
+    --main-color: #111111;
 
-    background: var(--background);
+    background: linear-gradient(-45deg, #09085d79, #0f0c8c79, #1410bb79 , #7712f779, #0244ad79);
     display: flex;
     flex-direction: column;
     align-items: center;
