@@ -1,13 +1,16 @@
-nav{
+nav {
     width: 100vw !important;
     height: 80px;
-    background-color: var(--nav-color);
-    display: flex;
+    background-color: #0e0e17;
     align-items: center;
     border-bottom: #000 1px solid;
+    justify-content: space-between; 
+    padding: 0 0 0 30px;
+    display: flex;
+
 }
 
-#logo{
+#logo {
     width: 55px;
     height: 55px;
     margin: 0px 20px 0 0;
@@ -15,21 +18,23 @@ nav{
     padding: 0;
 }
 
-.navbar-brand{
-
+.navbar-brand {
     margin-top: 4px;
     font-size: 35px; 
     color: var(--text-color);
 }
 
-.links-container{
-    margin-right: 30px;
+.links-container {
+   /* margin-right: 30px;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
+     display: flex;
+    gap: 40px;
+    margin: 0 auto;
 }
 
 nav a{
@@ -48,39 +53,26 @@ nav a:hover{
     /*  */
 }
 
-nav a:first-child:hover, a:first-child:focus{
+nav a:first-child:hover, a:first-child:focus {
     border: none;
     box-shadow: none;
     cursor: pointer;
 }
 
-nav .home-link{
-    position: relative;
-    left: 20px;
-    justify-content: left;
-    margin-left: 0;
-    width: 100%;
+nav .home-link { 
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    display: flex;
 }
 
 .tologin {
     display: flex;
-    justify-content: center;
-    width: 150px;
-    height: 90%;
-    padding: 0 10px;
-    font-size: 20px;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color);
-    background-color: rgba(255, 56, 86, 0.85);
-    border-radius: 15px;
-    border: 0;
-    transition: all 0.3s ease;
-    box-shadow: rgb(201, 46, 70) 0px 2px 0px 0px;
-}
+    flex-shrink: 0;
+}    
 
 nav svg{
-    fill: var(--text-color)
+    fill: var(--text-color);
 }
 
 #sidebar-active{
@@ -96,9 +88,10 @@ nav svg{
 }
 
 
-nav a:hover{
+nav a:hover {
     text-decoration: none;
     color: var(--text-color);
+   
 }
 
 
@@ -127,7 +120,7 @@ nav a:hover{
         z-index: 10;
         width: 300px;
 
-        background-color: var(--nav-color);
+        background-color:#0e0e17;
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.75s ease-out;
     }
