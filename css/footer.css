@@ -1,14 +1,23 @@
 /*---------------------------------- footer ----------------------------------*/
-footer { 
+/* ===== Footer Base ===== */
+.footer {
   margin: 0 !important;
-  padding: 0 24px 0 24px;
+  padding: 0 24px;
   background-color: var(--nav-color);
   width: 100vw;
   height: auto;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   border-top: #000 2px solid;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: flex-start;
+  gap: 48px;
 }
 
 .footer-logo {
@@ -16,35 +25,29 @@ footer {
   align-items: center;
   padding: 0;
   margin-left: 30px;
+  gap: 12px;
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; 
-  padding: 20px 20px 0 20px;
-  align-items: flex-start;
-  width: 100%;
-  gap: 48px;
+.footer-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.footer-section {
+.footer-section,
+.footer-top {
   flex: 1;
   min-width: 250px;
-  margin-bottom: 12px;
-  justify-content: space-between;
-}
-
-.footer-section:last-child {
-  margin-right: 0; 
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .footer-section h3 {
   margin-bottom: 15px;
   font-size: 18px;
-  display: flex;
-  gap: 24px;
-  justify-content: space-between;
 }
 
 .footer-section p {
@@ -52,10 +55,13 @@ footer {
   font-size: 14px;
 }
 
-.follow-us {
-  margin-left: auto; 
-  text-align: right;
-  margin: 0;
+.social-icon {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  color: var(--text-color);
 }
 
 .copyright {
@@ -64,143 +70,114 @@ footer {
   font-size: 12px;
   border-top: 2px solid rgba(0, 0, 0, 0.3);
   margin-top: 20px;
-  max-width: none;
-  margin-left: 0;
-  margin-right: 0;
-  text-align: center;
-
-}
-
-.social-icon {
-  display: inline-block;
-  margin-right: 10px;
-  gap: 15px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  justify-content: flex-start;  
-  margin: 0;                   
-  padding: 0;
-  color: var(--text-color);
 }
 
 
-@media screen and (max-width: 1235px) {
-  footer {
-    padding: 0 16px;
-  }
-  
+/* ====== Desktop: ≥1024px ====== */
+@media screen and (min-width: 1024px) {
   .footer-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-  
-  .footer-logo {
-    margin-left: 0;
-    justify-content: center;
-  }
-  
-  .footer-section {
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  .follow-us {
-    text-align: center;
-    margin: auto;
-    align-items: center;
-  }
-
-  .footer h3 {
-    text-align: center;
-  }
-}
-
-@media (max-width: 1024px) {
-  .footer-content {
-    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     gap: 32px;
+    align-items: flex-start;
+  }
+
+  .footer-top {
+    flex: 0 0 280px;
+    margin-right: 48px;
   }
 
   .footer-section {
-    min-width: unset;
-    width: 100%;
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+
+/* ====== Tablet: 768px - 1023px ====== */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
   }
 
-  .follow-us {
-    text-align: center;
+  /* Hàng 1: Logo + Address */
+  .footer-top,
+  .footer-section:nth-child(2) {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Hàng 2: Contacts + Follow Us */
+  .footer-section:nth-child(3),
+  .footer-section:nth-child(4) {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
     margin: 0;
   }
 
   .social-icon {
     justify-content: center;
   }
+
+  .footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
 }
 
-@media (max-width: 768px) {
-  .feedback {
+
+/* ====== Mobile: ≤767px ====== */
+@media screen and (max-width: 767px) {
+  .footer-content {
     flex-direction: column;
-    width: 100%;
-    gap: 12px;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
   }
 
-  .feedback input,
-  .feedback button {
-    width: 90vw;
+  .footer-section,
+  .footer-top {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .social-icon {
+    justify-content: center;
   }
 
   .footer-section h3 {
     font-size: 16px;
+    margin-bottom: 8px;
   }
 
   .footer-section p {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  footer {
-    padding: 0 12px;
+    font-size: 13px;
   }
 
-  .footer-section h3 {
-    font-size: 15px;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .footer-section p {
-    font-size: 12px;
-    line-height: 1.4;
-  }
-
-  .footer-logo {
-    flex-direction: column;
-    text-align: center;
-    margin-left: 0;
-  }
-
-  .social-icon {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .feedback {
-    width: 100%;
-    padding: 16px;
-    margin: 10px 0;
-  }
-
-  .feedback input,
-  .feedback button {
-    width: 100%;
-    font-size: 14px;
+  .social-icon i {
+    font-size: 20px;
   }
 
   .copyright {
-    font-size: 10px;
-    padding: 12px 4px;
+    font-size: 11px;
+    padding-top: 16px;
   }
 }
