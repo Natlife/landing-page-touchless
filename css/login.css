@@ -1,11 +1,17 @@
+
+
 .login {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh; 
     width: 100vw;
+    background-color: var(--ss-bg-color);
 }
 
+nav {
+    background-color: var(--nav-color);
+}
 .form {
     --background: rgba(255, 56, 86, 0.85);
     --input-focus: #2d8cf0;
