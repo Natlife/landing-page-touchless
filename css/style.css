@@ -86,6 +86,7 @@ html{
 }
 
 body{
+  color: var(--text-color);
   background-color: var(--bg-color);
   font-family: 'Century Gothic','TeXGyreAdventor',"STHeiti",sans-serif;
 }
@@ -109,7 +110,6 @@ body{
 .table-container::-webkit-scrollbar-thumb:hover {
   background: var(--ss-bg-color) !important;
 }
-
 
 a:focus{
   text-decoration: none;

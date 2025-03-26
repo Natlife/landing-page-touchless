@@ -81,8 +81,6 @@
   margin-top: 20px;
 }
 
-
-
 @media screen and (min-width: 1024px) {
   .footer-content {
     flex-wrap: nowrap;
