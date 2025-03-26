@@ -14,7 +14,7 @@ async function signIn() {
 
         message.textContent = "Sending email...";
 
-        const redirectTo = "http://localhost:5500/landing-page-touchless/"
+        const redirectTo = "http://landing-page-touchless.vercel.app/"
 
         const { error } = await supabase.auth.signInWithOtp({
             email, 

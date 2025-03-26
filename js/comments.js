@@ -4,7 +4,7 @@ import { fetchRatings } from "./rating.js";
 let allComments = [];
 
 // get submit button
-document.getElementById("submit-comment").addEventListener("click", async (event) =>  {
+document.getElementById("submit-comment").addEventListener("click", async (event) => {
     event.preventDefault();
     const comment = document.getElementById("comment-input").value;
     const rating = document.querySelector('input[name="rate"]:checked')?.value;
@@ -16,15 +16,66 @@ document.getElementById("submit-comment").addEventListener("click", async (event
 
     const user_id = session.user.id;
 
-    if(!rating) return alert("Please provide a rating!");
+    if (!rating) return alert("Please provide a rating!");
 
     const { error } = await supabase
         .from("reviews")
-        .insert([{user_id, rating, comment }])
-    if(error) return alert("You can only comment once!");
+        .insert([{ user_id, rating, comment }])
+    if (error) return alert("You can only comment once!");
+
+    checkComment(user_id, comment);
 
     document.getElementById("comment-input").value = "";
 });
+
+
+/*
+Author: Phan Son
+-----
+Function sending p_user_id, p_comment to Edge Function of Supabase.
+It will alert to browser if user's comment is invalid.
+*/
+function checkComment(p_user_id, p_comment) {
+    try {
+        return fetch('https://jomvhjqzlqyfvssneprr.supabase.co/functions/v1/review-validation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpvbXZoanF6bHF5ZnZzc25lcHJyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIzMDgxMzYsImV4cCI6MjA1Nzg4NDEzNn0.yjce3yyEm-DDIEV9q0WCqHejtswF7CQRooaqzdhqnqI`
+            },
+            body: JSON.stringify({
+                p_user_id: p_user_id,
+                p_comment: p_comment,
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Kiểm tra nếu comment bị xóa
+            if (data.status === 'removed') {
+                // Hiển thị thông báo cho người dùng
+                alert('Bình luận của bạn đã bị xóa do vi phạm quy định.');
+                
+                // Có thể thêm logic để cập nhật UI ở đây
+                // Ví dụ: removeCommentFromUI(comment_id);
+            }
+            
+            // Trả về kết quả để có thể sử dụng trong promise chain
+            return data;
+        })
+        .catch(error => {
+            console.error('Error validating comment:', error);
+            // Không hiển thị alert khi có lỗi kết nối
+        });
+    } catch(e) {
+        console.error('Exception in checkComment:', e);
+        return Promise.reject(e);
+    }
+}
 
 // update comments
 async function fetchComments() {
@@ -81,7 +132,6 @@ async function renderComments() {
         });
 
         isMyComment = (comment.user_id === userId);
-        console.log(isMyComment);
 
         commentItem.innerHTML = `
         <div style="display: flex; align-items: center;">
@@ -89,7 +139,7 @@ async function renderComments() {
           <p><strong>${comment.username}</strong></p>
         </div>
         <p><strong>${renderStars(comment.rating)} (${formattedDate})</strong></p>
-        <p>${comment.comment}</p>
+        <p class="comment-text"></p>
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div style="display: flex; align-items: center;">
                   <button type="button" class="like-btn" data-id="${comment.review_id}" style="background: none; border: none; cursor: pointer;">
@@ -103,6 +153,8 @@ async function renderComments() {
            </div>
         <hr>
         `;
+
+        commentItem.querySelector("#comment-text").textContent = comment.comment;
         commentList.appendChild(commentItem);
     })
 }
