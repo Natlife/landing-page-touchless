@@ -62,8 +62,25 @@ nav .home-link{
     
 }
 
+.tologin {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 90%;
+    padding: 0 10px;
+    font-size: 20px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: rgba(255, 56, 86, 0.85);
+    border-radius: 15px;
+    border: 0;
+    transition: all 0.3s ease;
+    box-shadow: rgb(201, 46, 70) 0px 2px 0px 0px;
+}
+
 nav svg{
-    fill: var(--text-color);
+    fill: var(--text-color)
 }
 
 #sidebar-active{

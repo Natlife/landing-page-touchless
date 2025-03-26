@@ -2,11 +2,12 @@ import { supabase } from "./supabaseClient.js";
  
  export async function checkAndSaveUserSession() {
      if(window.location.hash) {
-         const { data: { user }, error } = await supabase.auth.getUser()
+         const { error } = await supabase.auth.getUser()
          if(error) {
              console.error(error);
          }
      }
+
      const { data: { session }, error: sessionError } = await supabase.auth.getSession();
      const authButton = document.getElementById("authButton");
  
@@ -17,7 +18,7 @@ import { supabase } from "./supabaseClient.js";
      
      if (!session || !session.user) {
          authButton.innerHTML = "Log in";
-         authButton.onclick = async function () {
+         authButton.onclick = function () {
              window.open('login.html', '_self')
          }
          console.log("⚠ Chưa đăng nhập.");
@@ -32,7 +33,7 @@ import { supabase } from "./supabaseClient.js";
                  throw error;
              }
              console.log("Đăng xuất thành công.");
-             window.location.href = "http://127.0.0.1:5500/landing-page-touchless/";
+             window.open("index.html", '_self');
          } catch (error) {
              console.error(error);
          }

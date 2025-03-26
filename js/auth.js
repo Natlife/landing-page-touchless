@@ -14,7 +14,7 @@ async function signIn() {
 
         message.textContent = "Sending email...";
 
-        const redirectTo = "http://127.0.0.1:5500/landing-page-touchless/"
+        const redirectTo = "http://localhost:5500/landing-page-touchless/"
 
         const { error } = await supabase.auth.signInWithOtp({
             email, 

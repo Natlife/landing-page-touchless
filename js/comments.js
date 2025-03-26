@@ -1,10 +1,11 @@
 import { supabase } from "./supabaseClient.js";
 import { fetchRatings } from "./rating.js";
 
-let  allComments = [];
+let allComments = [];
 
 // get submit button
-document.getElementById("submit-comment").addEventListener("click", async () =>  {
+document.getElementById("submit-comment").addEventListener("click", async (event) =>  {
+    event.preventDefault();
     const comment = document.getElementById("comment-input").value;
     const rating = document.querySelector('input[name="rate"]:checked')?.value;
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
@@ -20,7 +21,7 @@ document.getElementById("submit-comment").addEventListener("click", async () => 
     const { error } = await supabase
         .from("reviews")
         .insert([{user_id, rating, comment }])
-    if(error) return alert("Error sending comment!");
+    if(error) return alert("You can only comment once!");
 
     document.getElementById("comment-input").value = "";
 });
@@ -54,9 +55,20 @@ function renderStars(rating) {
     return stars;
 }
 
-function renderComments() {
+async function renderComments() {
     const commentList = document.getElementById("comment-list");
     commentList.innerHTML = "";
+
+    let isMyComment = true;
+    let userId;
+    try {
+        const { data: { session }, error } = await supabase.auth.getSession();
+
+        if(error) throw error;
+        userId = session.user.id; 
+    } catch {
+        console.log("Chưa đăng nhập");
+    }
 
     allComments.forEach(comment => {
         const commentItem = document.createElement("div");
@@ -67,6 +79,9 @@ function renderComments() {
             day: "2-digit", month: "2-digit", year: "numeric", 
             hour: "2-digit", minute: "2-digit" 
         });
+
+        isMyComment = (comment.user_id === userId);
+        console.log(isMyComment);
 
         commentItem.innerHTML = `
         <div style="display: flex; align-items: center;">
@@ -82,9 +97,9 @@ function renderComments() {
                   </button>
                   <span class="like-count" data-id="${comment.review_id}">${comment.like_count || 0}</span>
               </div>
-              <button type="button" class="delete-btn" data-id="${comment.review_id}" style="background: none; border: none; color: red; cursor: pointer;">
-                  🗑️
-              </button>
+                  ${isMyComment ? `<button type="button" class="delete-btn" data-id="${comment.review_id}" style="background: none; border: none; color: red; cursor: pointer;">
+                    🗑️
+                  </button>` : ""}
            </div>
         <hr>
         `;

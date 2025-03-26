@@ -181,3 +181,9 @@ a:focus{
     height: auto;
   }  
 }
+
+#latest-app-size{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
