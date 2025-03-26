@@ -35,7 +35,7 @@ nav{
 nav a{
     display: flex;
     justify-content: center;
-    width: 150px;
+    width: 100px;
     height: 100%;
     padding: 0 20px;
     font-size: 20px;
@@ -313,7 +313,7 @@ nav a:hover{
     
 }
 
-@media(max-width: 1350px){
+@media(max-width: 1024px){
     .theme-switch{
         position: relative;
         bottom: 410px;
