@@ -154,7 +154,7 @@ async function renderComments() {
         <hr>
         `;
 
-        commentItem.querySelector("#comment-text").textContent = comment.comment;
+        commentItem.querySelector(".comment-text").textContent = comment.comment;
         commentList.appendChild(commentItem);
     })
 }
