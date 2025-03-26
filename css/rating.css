@@ -5,6 +5,15 @@
     justify-content: center;
     width: 100%;
     gap: 20px;
+    padding: 20px;
+}
+
+
+#avg-rates{
+  margin: 0;
+  display: flex;
+  position: relative;
+  width: 27vw;
 }
 
 .rating-summary {
@@ -17,7 +26,8 @@
 .average-rating {
     font-size: 48px;
     font-weight: bold;
-    align-items: center; 
+    align-items: center;
+    text-align: center; 
     line-height: 1;
 }
 
@@ -25,6 +35,7 @@
     color: #999;
     font-size: 24px;
     margin: 5px 0;
+    text-align: center;
 }
 
 .stars-display .filled {
@@ -34,6 +45,7 @@
 .rating-count {
     color: #666;
     font-size: 14px;
+    text-align: center;
 }
 
 .rating-bars {

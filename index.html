@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/docs.css">
     <link rel="stylesheet" href="css/team.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/comments.css">
     <link rel="stylesheet" href="css/rating.css">
     <link rel="stylesheet" href="css/feedback.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -59,14 +58,14 @@
 
             <a href="#features">Features</a>
             <a href="#updates">Updates</a>
-            <a href="#docs">Docs</a>
             <a href="#download">Download</a>
+            <a href="#docs">Docs</a>
             <a href="#team">About</a>
             <a id="authButton" class="tologin" onclick="window.open('login.html', '_blank')" style="cursor: pointer";>Log in</a>
         
                         
             <!-- change theme -->
-            <label class="theme-switch">
+            <!-- <label class="theme-switch">
                 <input type="checkbox" id="theme-switch__checkbox">
                 <div class="theme-switch__container">
                     <div class="theme-switch__clouds"></div>
@@ -85,7 +84,7 @@
                     </div>
                     </div>
                 </div>
-            </label>
+            </label> -->
         </div>
     </nav>
 
@@ -99,7 +98,7 @@
         <div class="second">
             <div class="review">
                 <div class="des-img">
-                    <div class="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="myCarousel" class="carousel slide" data-ride="carousel">    
                         <div class="carousel-inner">
                             <div class="item active"> <img src="img/app.jpg"></div>
                             <div class="item"> <img src="img/app2.jpg"> </div>
@@ -534,7 +533,9 @@
                 </div>
             </div>
 
-            <div id="comment-list" class="table-container"></div>
+            <div id="comment-list" class="table-container">
+                
+            </div>
         </section>
         
         <section id="avg-rates" class="ssbg">
@@ -554,14 +555,13 @@
 
     <footer class="footer">
             <div class="footer-content">
-                <div class="footer-section">
+
+                <div class="footer-top">
                     <div class="footer-logo">
                         <img class="navbar-brand" id="logo" src="img/logo.jpg">
                         <span class="navbar-brand"> touchless </span>
                     </div>  
                 </div>
-                
-            
                 
                 <div class="footer-section">
                     <h3>Address</h3>
@@ -605,7 +605,7 @@
     <script type="module" src="./js/user.js"></script>
     <script src="js/docs.js"></script>
     <script src="js/download.js"></script>
-    <script>
+    <!-- <script>
         const checkbox = document.getElementById('theme-switch__checkbox');
         const dark = document.getElementById('darkmode');
         dark.disabled = true;
@@ -616,7 +616,7 @@
                 dark.setAttribute('disabled', 'true');
             }
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
