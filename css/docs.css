@@ -11,7 +11,7 @@
 }
 
 .docs-body{
-    background-color: var(--docs-bg-color);
+    background-color: #fdfdfd;
     box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
     -webkit-box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
     -moz-box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
@@ -41,8 +41,7 @@
 }
 
 .title {
-    background-color: transparent !important;
-    color: var(--text-color);
+    color: black;
     padding: 10px;
     cursor: pointer;
     margin: 5px 0;
@@ -52,31 +51,25 @@
     border-bottom: 2px solid transparent; /* Để tránh màu viền mặc định */
     /* border-image: linear-gradient(90deg, black, white); */
     border-image-slice: 1;
-    /* transition: background-color 0.5s ease-in-out; */
+    transition: background-color 0.5s ease-in-out;
 }
-
 .title.disabled{
-    color: var(--btn-text-color);
-    background-color: rgba(128, 128, 128, 0.37) !important ;
+    background-color: grey !important ;
     pointer-events: none;
 }
 
-.content a,p,h1,h2,h3,h4,h5,h6,span,li{
-    color: var(--text-color) !important;
-}
 
 .content {
     display: none; 
     padding: 20px;
     /* background-color: aliceblue; */
-    /* border: 1px,solid,#31363F; */
+    border: 1px,solid,#31363F;
     border-radius: 20px;
     width: 100%;
-}
-
+} 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    /* #docs { */
+    /* #docs {
         /* padding: 20px; */
 
     #docs .docsHead {
@@ -85,9 +78,6 @@
         height: auto;
         padding: 10px;
         margin-bottom: 20px;
-        white-space: normal;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
     }
 
     .docs-body {
@@ -112,79 +102,8 @@
         overflow-x: hidden;
     }
 
-    .current-page {
-        margin-left: 0;
-        font-size: 75%;
-        text-align: center;
-    }
-
     .title {
-        text-align: center;
-        font-size: 120%;
-        padding: 6px;
-        margin: 3px 0;
-        border-radius: 16px;
+        font-size: 150%;
     }
 }
 
-@media screen and (max-width: 480px) {
-    #docs {
-        padding: 24px 15px;
-        padding-bottom: 50px;
-    }
-
-    .docs-body {
-        padding: 10px;
-        flex-direction: column;
-    }
-
-    #docs .docsHead {
-        font-size: 20px;       
-        padding: 8px;
-        margin-bottom: 15px;
-        /* Xuống dòng nếu text quá dài */
-        white-space: normal; 
-        overflow-wrap: break-word; 
-        word-wrap: break-word;
-    }
-
-    .docs-left,
-    .docs-right {
-        width: 100%;
-        height: auto;
-        max-height: none;
-        padding: 0 10px;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .docs-left {
-       margin-top: 10px;
-    }
-
-    .docs-right {
-        margin-top: 20px;
-        padding: 0;
-    }
-
-    
-    .current-page {
-        font-size: 1rem;
-        white-space: normal;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        margin: 0 10px;  
-        text-align: center;
-    }
-
-    .title {
-        text-align: center;
-        font-size: 100%;
-        padding: 4px;
-        margin: 2px 0;
-        border-radius: 12px;
-        white-space: normal;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-    }
-}
