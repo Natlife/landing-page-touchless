@@ -1,5 +1,5 @@
 /*---------------------------------- footer ----------------------------------*/
-/* ===== Footer Base ===== */
+
 .footer {
   margin: 0 !important;
   padding: 0 24px;
@@ -35,7 +35,16 @@
   object-fit: cover;
 }
 
-.footer-section,
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--text-color);
+
+}
 .footer-top {
   flex: 1;
   min-width: 250px;
@@ -73,7 +82,7 @@
 }
 
 
-/* ====== Desktop: ≥1024px ====== */
+
 @media screen and (min-width: 1024px) {
   .footer-content {
     flex-wrap: nowrap;
@@ -94,8 +103,9 @@
 }
 
 
-/* ====== Tablet: 768px - 1023px ====== */
-@media screen and (max-width: 1023px) and (min-width: 768px) {
+
+@media screen and (max-width: 1023px) 
+and (min-width: 768px) {
   .footer-content {
     display: flex;
     flex-wrap: wrap;
@@ -103,18 +113,32 @@
     gap: 32px;
     text-align: center;
   }
+ 
+  .footer-top {
+    flex: 1;
+    min-width: 250px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
-  /* Hàng 1: Logo + Address */
-  .footer-top,
   .footer-section:nth-child(2) {
     flex: 1 1 45%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+ 
+  .footer-section:nth-child(3) {
+    flex: 1;
+    min-width: 250px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
-  /* Hàng 2: Contacts + Follow Us */
-  .footer-section:nth-child(3),
   .footer-section:nth-child(4) {
     flex: 1 1 45%;
     display: flex;
@@ -138,7 +162,7 @@
 }
 
 
-/* ====== Mobile: ≤767px ====== */
+
 @media screen and (max-width: 767px) {
   .footer-content {
     flex-direction: column;
@@ -147,7 +171,12 @@
     gap: 24px;
   }
 
-  .footer-section,
+  .footer-section {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
   .footer-top {
     width: 100%;
     max-width: 320px;

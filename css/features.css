@@ -14,7 +14,13 @@
     justify-content: center;
   }
 
-  
+.fts-card h3 {
+    color: var(--text-color);
+} 
+
+.fts-card p {
+    color: var(--text-color);
+}
   
 #features .fts-card{
     border-radius: 10px;
