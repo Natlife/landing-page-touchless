@@ -70,8 +70,19 @@
     color: var(--text-color);
 }
 
-#home .carousel-inner{
+#home .carousel-inner {
     width: 100%;
+    max-width: 672px; 
+    height: 378px; 
+    overflow: hidden;
+    margin: 0 auto; 
+}
+
+#home .carousel-inner .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
 }
 
 
