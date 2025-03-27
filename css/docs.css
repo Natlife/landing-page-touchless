@@ -117,3 +117,41 @@ a {
     }
 }
 
+@media (max-width: 375px){
+    #docs{
+        padding: 0;
+    }
+    #docs .docsHead {
+        width: 100%;
+        font-size: 24px;
+        height: auto;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .docs-body {
+        flex-direction: column; 
+    }
+
+    .docs-left, .docs-right {
+        width: 100%; 
+    }
+
+    .docs-left {
+        height: 200px; 
+        overflow-y: auto; 
+        overflow-x: hidden;
+    }
+
+    .docs-right {
+        margin-top: 30px;
+        padding: 0; 
+        height: 500px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .title {
+        font-size: 150%;
+    }
+}
