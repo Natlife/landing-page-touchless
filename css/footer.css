@@ -64,6 +64,14 @@
   font-size: 14px;
 }
 
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+
 .social-icon {
   display: flex;
   gap: 15px;
@@ -73,6 +81,14 @@
   color: var(--text-color);
 }
 
+.social-icon a {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  color: #fff;
+}
 .copyright {
   text-align: center;
   padding-top: 20px;
