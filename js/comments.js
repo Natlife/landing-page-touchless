@@ -58,7 +58,7 @@ function checkComment(p_user_id, p_comment) {
             // Kiểm tra nếu comment bị xóa
             if (data.status === 'removed') {
                 // Hiển thị thông báo cho người dùng
-                alert('Bình luận của bạn đã bị xóa do vi phạm quy định.');
+                alert('Your comment has been deleted for violating our policies');
                 
                 // Có thể thêm logic để cập nhật UI ở đây
                 // Ví dụ: removeCommentFromUI(comment_id);
