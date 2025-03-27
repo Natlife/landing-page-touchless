@@ -132,7 +132,7 @@ async function renderComments() {
         });
 
         isMyComment = (comment.user_id === userId);
-
+        
         commentItem.innerHTML = `
         <div style="display: flex; align-items: center;">
           <span style="font-size: 24px; margin-right: 8px;">😎</span> <!-- Thay bằng icon khác nếu thích -->
@@ -155,7 +155,44 @@ async function renderComments() {
         `;
 
         commentItem.querySelector(".comment-text").textContent = comment.comment;
-        commentList.appendChild(commentItem);
+        if(isMyComment) commentList.appendChild(commentItem);
+    })
+
+    allComments.forEach(comment => {
+        const commentItem = document.createElement("div");
+        commentItem.classList.add("comment-item");
+
+        const date = new Date(comment.created_at);
+        const formattedDate = date.toLocaleString("vi-VN", { 
+            day: "2-digit", month: "2-digit", year: "numeric", 
+            hour: "2-digit", minute: "2-digit" 
+        });
+
+        isMyComment = (comment.user_id === userId);
+        
+        commentItem.innerHTML = `
+        <div style="display: flex; align-items: center;">
+          <span style="font-size: 24px; margin-right: 8px;">😎</span> <!-- Thay bằng icon khác nếu thích -->
+          <p><strong>${comment.username}</strong></p>
+        </div>
+        <p><strong>${renderStars(comment.rating)} (${formattedDate})</strong></p>
+        <p class="comment-text"></p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="display: flex; align-items: center;">
+                  <button type="button" class="like-btn" data-id="${comment.review_id}" style="background: none; border: none; cursor: pointer;">
+                      👍
+                  </button>
+                  <span class="like-count" data-id="${comment.review_id}">${comment.like_count || 0}</span>
+              </div>
+                  ${isMyComment ? `<button type="button" class="delete-btn" data-id="${comment.review_id}" style="background: none; border: none; color: red; cursor: pointer;">
+                    🗑️
+                  </button>` : ""}
+           </div>
+        <hr>
+        `;
+
+        commentItem.querySelector(".comment-text").textContent = comment.comment;
+        if(!isMyComment) commentList.appendChild(commentItem);
     })
 }
 
