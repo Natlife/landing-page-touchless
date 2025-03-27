@@ -25,6 +25,33 @@
     color: #fff !important;
 }
 
+.download-list-table .btn-primary {
+    background-color:  linear-gradient(-45deg, 
+    #43419a79, 
+    #4947d979, 
+    #3735bf79, 
+    #431cdd79, 
+    #2f74e279);  
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+a.btn.btn-primary.btn-sm {
+    background: linear-gradient(-45deg, 
+    #43419a90, 
+    #4947d990, 
+    #3735bf90, 
+    #431cdd90, 
+    #2f74e290);
+    color: white;              /* chữ trắng để nổi bật */
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
 /*
 Button RGB Color Stuffs
 */
@@ -34,7 +61,7 @@ Button RGB Color Stuffs
     padding: 15px 40px;
     border: none;
     outline: none;
-    color: black;
+    color: #fff;
     cursor: pointer;
     position: relative;
     top: 50%;
@@ -42,27 +69,40 @@ Button RGB Color Stuffs
     transform: translate(-50%, -50%);
     z-index: 0;
     border-radius: 12px;
-  }
+    background: linear-gradient(-45deg, 
+    #43419a79, 
+    #4947d979, 
+    #3735bf79, 
+    #431cdd79, 
+    #2f74e279);
+}
+
 .rainbow-button::after {
     content: "";
     z-index: -1;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: white;
+    color: #fff;
+    background: linear-gradient(-45deg, 
+    #43419a79, 
+    #4947d979, 
+    #3735bf79, 
+    #431cdd79, 
+    #2f74e279);
     left: 0;
     top: 0;
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
 }
+
+
   /* glow */
 .rainbow-button::before {
     content: "";
-    background: linear-gradient(
-      45deg,
-      #FF0000, #FF7300, #FFFB00, #48FF00,
-      #00FFD5, #002BFF, #FF00C8, #FF0000
-    );
+    background: linear-gradient(45deg,
+    #09085d79, #0f0c8c79, #1410bb79 ,
+    #7712f779, #0244ad79);
     position: absolute;
     top: -2px;
     left: -2px;
