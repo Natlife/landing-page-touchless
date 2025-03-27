@@ -1,6 +1,5 @@
 $(document).ready(function () {
-
-    // using google sheet with json data
+    // using google with json data
 
     const ggSheetID = '1xgZgnCxhN0gkZTu9COIaiY5lygCfqMxGWN02rT1KVCg';
     const url = `https://docs.google.com/spreadsheets/d/${ggSheetID}/gviz/tq?tqx=out:json`;
@@ -8,29 +7,44 @@ $(document).ready(function () {
     fetch(url)
         .then(res => res.text())
         .then(rep => {
-            // Bat dau xu li du lieu sau khi co noi dung tu response
             const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
             const rows = jsonData.table.rows;
 
-            // Lay title, description and img
-            rows.forEach((row, index) => {
+
+            // Group data according to the Title
+            const groupedData = {};
+
+            
+            // Take tile, description and img from gg sheet
+            rows.slice(1).forEach(row => {
                 const title = row.c[0]?.v || '';
-                const desc = row.c[1]?.v || '';
+                const point = row.c[1]?.v || '';
                 const img = row.c[2]?.v || '';
 
-               
+        
+                if (!groupedData[title]) {
+                    groupedData[title] = { points: [], img };
+                }
+
+                groupedData[title].points.push(point);
+            });
+
+            // Display grouped data (description)
+            Object.entries(groupedData).forEach(([title, data], index) => {
                 const htmlText = `
                     <h3>${title}</h3>
-                    - ${desc}<br><br>
+                    ${data.points.map(p => `- ${p}<br>`).join('')}
+                    <br>
                 `;
 
-                //update text
+            // Update text
                 $('#updates-text').append(htmlText);
 
-                // update img to carousel
+            
+            // Update img to carousel
                 const htmlImg = `
                     <div class="item${index === 0 ? ' active' : ''}">
-                        <img src="${img}" alt="update-img-${index}">
+                        <img src="${data.img}" alt="update-img-${index}">
                     </div>
                 `;
                 $('#carousel-inner').append(htmlImg);
