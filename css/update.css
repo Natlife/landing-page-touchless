@@ -10,18 +10,21 @@
     flex-direction: column;
 }
 
-.des-img .carousel-inner {
+
+.des-img .carousel-inner .item {
     width: 100%;
-    max-width: 672px; 
-    height: 378px; 
+    max-width: 800px;     
+    height: 380px;        
     overflow: hidden;
-    margin: 0 auto; 
+    border-radius: 15px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .des-img .carousel-inner .item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;     
     display: block;
 }
 
