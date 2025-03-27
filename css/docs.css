@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
+    color: var(--text-color);
 }
 
 .docs-body{
@@ -42,7 +43,7 @@
 }
 
 .title {
-    color: black;
+    background-color: transparent !important;
     padding: 10px;
     cursor: pointer;
     margin: 5px 0;
@@ -52,13 +53,12 @@
     border-bottom: 2px solid transparent; /* Để tránh màu viền mặc định */
     /* border-image: linear-gradient(90deg, black, white); */
     border-image-slice: 1;
-    transition: background-color 0.5s ease-in-out;
+    /* transition: background-color 0.5s ease-in-out; */
 }
 .title.disabled{
     background-color: grey !important ;
     pointer-events: none;
 }
-
 
 .content {
     display: none; 
@@ -68,6 +68,11 @@
     border-radius: 20px;
     width: 100%;
 } 
+
+.content p,h1,h2,h3,h4,h5,span{
+    color: var(--text-color) !important;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     /* #docs {
