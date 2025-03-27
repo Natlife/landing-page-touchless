@@ -132,6 +132,9 @@ async function renderComments() {
         });
 
         isMyComment = (comment.user_id === userId);
+        if(isMyComment) {
+            commentItem.classList.add("my-comment");
+        } 
         
         commentItem.innerHTML = `
         <div style="display: flex; align-items: center;">

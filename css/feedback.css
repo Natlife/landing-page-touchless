@@ -65,6 +65,22 @@ body {
   background-color: var(--ss-bg-color);
 }
 
+.my-comment {
+  background: rgba(255, 215, 0, 0.15); /* Vàng nhạt trong suốt */
+  border-left: 4px solid #ffd700; /* Viền trái vàng */
+  padding: 16px;
+  border-radius: 10px;
+  color: #fff; /* Chữ trắng */
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.my-comment:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.5);
+}
 
 hr{
   border: 0;
