@@ -11,7 +11,7 @@
 }
 
 .docs-body{
-    background-color: #fdfdfd;
+    background-color: var(--docs-bg-color);
     box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
     -webkit-box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
     -moz-box-shadow: 2px 2px 0px 5px rgba(0,0,0,1);
