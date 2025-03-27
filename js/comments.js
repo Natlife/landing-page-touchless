@@ -7,8 +7,14 @@ let allComments = [];
 document.getElementById("submit-comment").addEventListener("click", async (event) => {
     event.preventDefault();
     const comment = document.getElementById("comment-input").value;
+    const words = comment.trim();
     const rating = document.querySelector('input[name="rate"]:checked')?.value;
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+
+    const wordCount = words.split(/\s+/).length;
+    if (wordCount > 1000) {
+        return alert("Your comment is too long! Please limit it to 1000 words.");
+    }
 
     if (sessionError || !session || !session.user) {
         return alert("You need to log in to comment!");
@@ -135,7 +141,7 @@ async function renderComments() {
         if(isMyComment) {
             commentItem.classList.add("my-comment");
         } 
-        
+
         commentItem.innerHTML = `
         <div style="display: flex; align-items: center;">
           <span style="font-size: 24px; margin-right: 8px;">😎</span> <!-- Thay bằng icon khác nếu thích -->
