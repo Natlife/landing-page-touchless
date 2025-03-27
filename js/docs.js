@@ -40,6 +40,7 @@ $(document).ready(function(){
                 var titleId = $(this).attr("id");
                 var contentId = "content" + titleId.charAt(titleId.length - 1);
                 var content = $("#" + contentId);
+                var right= $(".docs-right");
                 if ($(this).hasClass('disabled')) {
                     return; 
                 }
@@ -48,6 +49,9 @@ $(document).ready(function(){
 
                 $(".content").slideUp(); 
                 content.slideDown();
+                if (right.scrollTop() > 0) {
+                    right.animate({ scrollTop: 0 }, 500); 
+                }
             });
 
             // $(".title").click(function() {
@@ -76,4 +80,5 @@ $(document).ready(function(){
             //     }
             // });
         });
-});
+
+    });
