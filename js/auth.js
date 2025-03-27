@@ -29,7 +29,7 @@ async function signIn() {
 
         message.textContent = "Email sent! Please check your inbox.";
     } catch (error) {
-        message.textContent = `Lỗi: ${error.message || error}`
+        message.textContent = `Error: ${error.message || error}`
         console.error(error);
     }
 }
