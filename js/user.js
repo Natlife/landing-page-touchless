@@ -41,7 +41,7 @@ const supabase = await supabasePromise;
          }
      }
  
-    //  const user = session.user;
+     const user = session.user;
     //  console.log("✅ Session có user:", user);
  
      const user_id = user.id;
