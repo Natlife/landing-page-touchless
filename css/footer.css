@@ -182,19 +182,34 @@ and (min-width: 768px) {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 24px;
+    gap: 12px;
   }
 
   .footer-section {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
+    padding-bottom: 0;
   }
   
   .footer-top {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
+    height: 50%;
+  }
+
+  div .footer-top {
+    max-height: 70px;
+    min-height: 50px;
+    height: 80%;
+
+  }
+
+  .contacts {
+    max-height: 70px;
+    min-height: 50px;
+    height: 80%;
   }
 
   .footer-logo {
@@ -215,6 +230,11 @@ and (min-width: 768px) {
     font-size: 13px;
   }
 
+  .follow-us {
+    max-height: 70px;
+    min-height: 50px;
+    height: 80%;
+  }
   .social-icon i {
     font-size: 20px;
   }

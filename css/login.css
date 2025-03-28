@@ -3,7 +3,6 @@ html, body {
   margin: 0;
   padding: 0;
 
-  /* Hỗ trợ iOS cũ & iOS mới */
   height: -webkit-fill-available; /* iOS Safari cũ */
   min-height: 100vh;
   overflow: hidden;
@@ -95,7 +94,7 @@ nav.navbar-fixed-top {
   width: 90%;
 }
 
-/* FORM ELEMENTS */
+
 .form > p {
   color: var(--font-color);
   font-weight: 700;
@@ -166,7 +165,7 @@ nav.navbar-fixed-top {
   width: 100%;
 }
 
-/* ====================== BACKGROUND ANIMATION ====================== */
+
 .bg-animation {
   position: fixed;
   top: 0;
@@ -176,7 +175,7 @@ nav.navbar-fixed-top {
   z-index: -1;
 }
 
-/* ====================== RESPONSIVE BREAKPOINTS ====================== */
+
 @media screen and (max-width: 1024px) {
   .form {
     padding: 40px;
