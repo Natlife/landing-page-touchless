@@ -1,5 +1,9 @@
-import { supabase } from "./supabaseClient.js";
+import { supabasePromise } from "./supabaseClient.js"
 import { fetchRatings } from "./rating.js";
+
+const supabase = await supabasePromise;
+
+
 
 let allComments = [];
 
@@ -41,13 +45,15 @@ Author: Phan Son
 Function sending p_user_id, p_comment to Edge Function of Supabase.
 It will alert to browser if user's comment is invalid.
 */
-function checkComment(p_user_id, p_comment) {
+async function checkComment(p_user_id, p_comment) {
+    const response = await fetch("config.json");
+    const config = await response.json();
     try {
         return fetch('https://jomvhjqzlqyfvssneprr.supabase.co/functions/v1/review-validation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpvbXZoanF6bHF5ZnZzc25lcHJyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIzMDgxMzYsImV4cCI6MjA1Nzg4NDEzNn0.yjce3yyEm-DDIEV9q0WCqHejtswF7CQRooaqzdhqnqI`
+                'Authorization': `Bearer ${config.SUPABASE_ANON_KEY}`
             },
             body: JSON.stringify({
                 p_user_id: p_user_id,

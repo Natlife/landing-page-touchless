@@ -1,6 +1,15 @@
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+let supabase = null;
 
-const SUPABASE_URL = "https://jomvhjqzlqyfvssneprr.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpvbXZoanF6bHF5ZnZzc25lcHJyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIzMDgxMzYsImV4cCI6MjA1Nzg4NDEzNn0.yjce3yyEm-DDIEV9q0WCqHejtswF7CQRooaqzdhqnqI";
+async function initSupabase() {
+  const response = await fetch("config.json");
+  const config = await response.json();
+  const { createClient } = await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm");
+  
+  supabase = createClient(config.SUPABASE_URL, config.SUPABASE_ANON_KEY);
+  return supabase;
+}
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);  
+// Khởi tạo ngay lập tức khi file được import
+const supabasePromise = initSupabase();
+
+export { supabasePromise };

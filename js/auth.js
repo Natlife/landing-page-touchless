@@ -1,4 +1,6 @@
-import { supabase } from "./supabaseClient.js"
+import { supabasePromise } from "./supabaseClient.js"
+
+const supabase = await supabasePromise;
 
 const emailInput = document.getElementById("email");
 const loginButton = document.getElementById("login-button");

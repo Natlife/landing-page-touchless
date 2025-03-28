@@ -1,4 +1,6 @@
-import { supabase } from "./supabaseClient.js";
+import { supabasePromise } from "./supabaseClient.js"
+
+const supabase = await supabasePromise;
  
  export async function checkAndSaveUserSession() {
      if(window.location.hash) {
