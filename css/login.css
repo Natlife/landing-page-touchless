@@ -120,7 +120,7 @@ nav.navbar-fixed-top {
   box-shadow: 4px 4px var(--main-color);
   font-size: 18px;
   font-weight: 600;
-  color: var(--font-color);
+  color: #000;
   padding: 10px;
   outline: none;
 }
