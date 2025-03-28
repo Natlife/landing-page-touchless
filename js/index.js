@@ -83,3 +83,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     typeQuote(quotes[index]); // Start with the first quote
 });
+async function copyToClipboard(email) {
+    try {
+        await navigator.clipboard.writeText(email);
+        alert('Địa chỉ email đã được sao chép: ' + email);
+    } catch (err) {
+        console.error('Không thể sao chép: ', err);
+    }
+}

@@ -254,7 +254,7 @@
                     <a class="card-socials-btn github" href="https://github.com/TuanVuNguyen89">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="nguyentuanvuk62@gmail.com">
+                    <a class="card-socials-btn gmail" title="nguyentuanvuk62@gmail.com" onclick="copyToClipboard('nguyentuanvuk62@gmail.com')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -274,7 +274,7 @@
                     <a class="card-socials-btn github" href="https://github.com/thaiminhpv">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="">
+                    <a class="card-socials-btn gmail" title="" onclick="copyToClipboard('thaiminhpv@gmail.com')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -294,7 +294,7 @@
                     <a class="card-socials-btn github" href="https://github.com/huytran303">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="">
+                    <a class="card-socials-btn gmail" title="" onclick="copyToClipboard('null')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -314,7 +314,7 @@
                     <a class="card-socials-btn github" href="">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="">
+                    <a class="card-socials-btn gmail" title="" onclick="copyToClipboard('null')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -334,7 +334,7 @@
                     <a class="card-socials-btn github" href="http://github.com/huyhao27">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="haok19fpthola@gmail.com">
+                    <a class="card-socials-btn gmail" title="haok19fpthola@gmail.com" onclick="copyToClipboard('haok19fpthola@gmail.com')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -354,7 +354,7 @@
                     <a class="card-socials-btn github" href="https://github.com/ForeverWeLearn">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="theanh11052006@gmail.com">
+                    <a class="card-socials-btn gmail" title="theanh11052006@gmail.com" onclick="copyToClipboard('theanh11052006@gmail.com')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -374,7 +374,7 @@
                     <a class="card-socials-btn github" href="https://github.com/PhanNTSon">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="minikie456@gmail.com">
+                    <a class="card-socials-btn gmail" title="minikie456@gmail.com" onclick="copyToClipboard('minikie456@gmail.com')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -394,7 +394,7 @@
                     <a class="card-socials-btn github" href="https://github.com/Cahoii">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="tangth023@gmail.com">
+                    <a class="card-socials-btn gmail" title="tangth023@gmail.com" onclick="copyToClipboard('tangth023@gmail.com')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -414,7 +414,7 @@
                     <a class="card-socials-btn github" href="https://github.com/Pain3706">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="babinh372006@gmail.com">
+                    <a class="card-socials-btn gmail" title="babinh372006@gmail.com" onclick="copyToClipboard('babinh372006@gmail.com')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -434,7 +434,7 @@
                     <a class="card-socials-btn github" href="https://github.com/thuonghuyenn">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="ngothuonghuyen2@gmail.com">
+                    <a class="card-socials-btn gmail" title="ngothuonghuyen2@gmail.com" onclick="copyToClipboard('ngothuonghuyen2@gmail.com')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -455,14 +455,23 @@
                     <a class="card-socials-btn github" href="https://github.com/Natlife">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a class="card-socials-btn gmail" title="ndluong1903@gmail.com">
+                    <a class="card-socials-btn gmail" title="ndluong1903@gmail.com" onclick="copyToClipboard('ndluong1903@gmail.com')">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-
+    <script>
+        async function copyToClipboard(email) {
+            try {
+                await navigator.clipboard.writeText(email);
+                alert('Địa chỉ email đã được sao chép: ' + email);
+            } catch (err) {
+                console.error('Không thể sao chép: ', err);
+            }
+        }
+    </script>
     <!-- feedback slideshow -->
     <section id="feedback">
         <section id="fb-slide" class="ssbg">
